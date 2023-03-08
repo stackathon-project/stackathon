@@ -7500,7 +7500,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _Yao__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Yao */ "./src/Yao.js");
 /* harmony import */ var _Michelle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Michelle */ "./src/Michelle.js");
-/* harmony import */ var _components_Yao_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Yao/Home */ "./src/components/Yao/Home.js");
+/* harmony import */ var _components_Landing_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Landing/Home */ "./src/components/Landing/Home.js");
 
 
 
@@ -7515,7 +7515,7 @@ function Routing() {
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Michelle__WEBPACK_IMPORTED_MODULE_2__["default"], null)
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
     path: "/",
-    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Yao_Home__WEBPACK_IMPORTED_MODULE_3__["default"], null)
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Landing_Home__WEBPACK_IMPORTED_MODULE_3__["default"], null)
   }));
 }
 
@@ -7706,10 +7706,10 @@ function Yao() {
 
 /***/ }),
 
-/***/ "./src/components/Yao/Home.js":
-/*!************************************!*\
-  !*** ./src/components/Yao/Home.js ***!
-  \************************************/
+/***/ "./src/components/Landing/Home.js":
+/*!****************************************!*\
+  !*** ./src/components/Landing/Home.js ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
