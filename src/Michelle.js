@@ -24,10 +24,20 @@ export default function Michelle() {
   }
 
   return (
-    <div className="gameboy-container">
-      <img className="gameboy" src="https://cdn-icons-png.flaticon.com/512/1135/1135231.png"></img>
-      <button onClick={handleClick}> Click here to make small!</button>
-    </div>
+    <>
+      <div className='outside'>
+        <h1 className="header">
+          Gameboy Simulator
+        </h1>
+        <div className="container ">
+          <div className="gameboy-container">
+            <img className="gameboy" src="https://cdn-icons-png.flaticon.com/512/1135/1135231.png"></img>
+          </div>
+          <button className="button" onClick={handleClick}> Click here to make small!</button>
+        </div>
+      </div>
+
+    </>
 
   )
 }
