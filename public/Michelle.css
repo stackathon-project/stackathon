@@ -1,0 +1,220 @@
+html {
+    font-size: var(--size);
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Sans';
+    justify-content: center;
+}
+
+.gameboy-body {
+    background: rgb(192, 203, 255);
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    height: 26rem;
+    justify-content: center;
+    width: 18rem;
+    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);
+}
+
+.gameboy-footer {
+    color: white;
+    margin-top: 6rem;
+    font-family: 'Press Start 2P';
+}
+
+.gameboy-center-main {
+    height: 11rem;
+    width: 11rem;
+    position: absolute;
+    top: 15rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.gameboy-center-brand {
+    text-align: center;
+    border: 1px solid #9ebbee;
+    border-radius: 5rem;
+    width: 60%;
+    margin: 1rem auto 0 auto;
+    font-family: 'PT Sans';
+    color: #7c91be;
+}
+
+.gameboy-curve {
+    background: rgb(192, 203, 255);
+    height: 4rem;
+    position: absolute;
+    top: 26rem;
+    bottom: 2rem;
+    z-index: 4;
+    width: 18rem;
+    border-radius: 0 0 50% 50% / 50px;
+    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)
+}
+
+.gameboy-b-contBUTTON {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background: rgb(138, 6, 6);
+    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);
+    position: absolute;
+    top: 5rem;
+    margin-left: 1rem;
+}
+
+.gameboy-b-cont:after {
+    content: 'HOME';
+    position: absolute;
+    top: 6rem;
+    color: white;
+    font-size: .4rem;
+    margin-left: .9rem;
+    margin-top: .2rem;
+    font-family: 'PT Sans';
+}
+
+.gameboy-b-cont {
+    background-color: #3f515a;
+    border-radius: .5rem;
+    height: 11rem;
+    margin: 1rem;
+    width: 100%;
+}
+
+.gameboy-screen {
+    background-color: white;
+    height: 8rem;
+    margin: 2rem 3rem;
+}
+
+
+.gameboy-screen-curve {
+    background: #3f515a;
+    height: 4rem;
+    position: absolute;
+    top: 11.5rem;
+    bottom: 2rem;
+    z-index: 4;
+    width: 16rem;
+    border-radius: 0 0 70% 70% / 50px;
+}
+
+.gameboy-screen-curve::before {
+    content: 'GAME BOY COLOR';
+    color: white;
+    position: absolute;
+    top: 1.5rem;
+    left: 3.6rem;
+    font-style: italic;
+    font-family: 'PT Sans';
+}
+
+/* CONTROLLERS */
+
+.gb-up {
+    position: absolute;
+    width: 1.5rem;
+    height: 2rem;
+    top: 2rem;
+    right: 10.3rem;
+    background-color: #3f515a;
+    border-radius: .3rem;
+}
+
+.gb-down {
+    position: absolute;
+    width: 1.5rem;
+    height: 2rem;
+    top: 4rem;
+    right: 10.3rem;
+    background-color: #3f515a;
+    border-radius: .3rem;
+}
+
+.gb-left {
+    position: relative;
+    width: 2rem;
+    height: 1.5rem;
+    top: 1rem;
+    left: -2rem;
+    background-color: #3f515a;
+    border-radius: .3rem;
+}
+
+/* .gb-right {
+    position: relative;
+    width: 2rem;
+    height: 1.5rem;
+    top: 1rem;
+    left: -2rem;
+    background-color: #3f515a;
+    border-radius: .3rem;
+} */
+
+
+/* BUTTONS */
+
+.gb-btn-A {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #3f515a;
+    top: 2rem;
+    right: -2rem;
+}
+
+.gb-btn-B {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #3f515a;
+    top: 4rem;
+    right: 0rem;
+}
+
+.gb-letter {
+    margin: .5rem;
+    text-align: center;
+    color: #9E9E9E;
+}
+
+.gb-btn-content {
+    margin-top: 3rem;
+    margin: 4rem 2rem;
+    font-size: .7rem;
+}
+
+.gb-btn-center {
+    display: flex;
+    justify-content: space-around;
+    color: #7c91be;
+}
+
+.gb-btn-on {
+    width: 3rem;
+    height: 1rem;
+    background-color: #3f515a;
+    border-radius: 2rem;
+}
+
+.gameboy-center-dotted {
+    position: absolute;
+    top: 7rem;
+    left: 10rem;
+}
+
+.gb-dotted {
+    width: 3rem;
+    border-bottom: 4px dotted #3f515a;
+    transform: rotate(150deg);
+    height: .4rem;
+}
