@@ -7445,42 +7445,118 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
+/* harmony import */ var _public_Michelle_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/Michelle.css */ "./public/Michelle.css");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+
+
+
 
 
 
 function Michelle() {
   const animation = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  const [isBig, setIsBig] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
-  if (!isBig) {
+  const navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
+  let count = 0.75;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     animation.current = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
       targets: '.gameboy',
-      scale: 0.5
+      scale: count
     });
-  } else {
-    animation.current = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
-      targets: '.gameboy',
-      scale: 1
-    });
-  }
+  }, []);
   const handleClick = () => {
-    !isBig ? setIsBig(true) : setIsBig(false);
-    console.log("isBig", isBig);
+    count += 0.25;
+    console.log("count in increasing is:", count);
+    animation.current = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+      targets: '.gameboy',
+      scale: count
+    });
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "outside"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    className: "header"
-  }, "Gameboy Simulator"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "container "
+  const homeClick = () => {
+    console.log("ive been clicked!");
+    navigate('/');
+  };
+  const revertClick = () => {
+    if (count > 0.5) {
+      count -= 0.25;
+      console.log("count in decreasing is:", count);
+      animation.current = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_1__["default"])({
+        targets: '.gameboy',
+        scale: count
+      });
+    }
+  };
+  const selectClick = () => {
+    console.log("ive been selected!");
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "gameboy-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    className: "gameboy",
-    src: "https://cdn-icons-png.flaticon.com/512/1135/1135231.png"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    className: "button",
-    onClick: handleClick
-  }, " Click here to make small!"))));
+    className: "gameboy"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+    href: "https://fonts.googleapis.com/css?family=PT+Sans&display=swap",
+    rel: "stylesheet"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+    href: "https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap",
+    rel: "stylesheet"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-body"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-b-cont"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-b-contBUTTON",
+    onClick: homeClick
+  }, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-screen"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-screen-curve"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-center-main"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-center-brand"
+  }, "STACKATHON"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-center-controllers"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-up"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-down"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-left"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-btn-A",
+    onClick: selectClick
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "gb-letter"
+  }, "A")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-btn-B"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "gb-letter"
+  }, "B")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-btn-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-btn-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    onClick: revertClick,
+    className: "gb-btn-on"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    onClick: handleClick,
+    className: "gb-btn-on"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-btn-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "REDUCE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "MAGNIFY ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-center-dotted"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-dotted"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-dotted"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-dotted"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-dotted"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gb-dotted"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "gameboy-curve"
+  }))));
 }
 
 /***/ }),
@@ -7763,6 +7839,32 @@ const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({
   reducer: {}
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (store);
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./public/Michelle.css":
+/*!*******************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./public/Michelle.css ***!
+  \*******************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n    font-size: var(--size);\n}\n\nbody {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    font-family: 'PT Sans';\n    justify-content: center;\n}\n\n.gameboy-body {\n    background: rgb(192, 203, 255);\n    border-radius: 1rem 1rem 0 0;\n    display: flex;\n    height: 26rem;\n    justify-content: center;\n    width: 18rem;\n    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);\n}\n\n.gameboy-footer {\n    color: white;\n    margin-top: 6rem;\n    font-family: 'Press Start 2P';\n}\n\n.gameboy-center-main {\n    height: 11rem;\n    width: 11rem;\n    position: absolute;\n    top: 15rem;\n    border-radius: 0 0 1rem 1rem;\n}\n\n.gameboy-center-brand {\n    text-align: center;\n    border: 1px solid #9ebbee;\n    border-radius: 5rem;\n    width: 60%;\n    margin: 1rem auto 0 auto;\n    font-family: 'PT Sans';\n    color: #7c91be;\n}\n\n.gameboy-curve {\n    background: rgb(192, 203, 255);\n    height: 4rem;\n    position: absolute;\n    top: 26rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 18rem;\n    border-radius: 0 0 50% 50% / 50px;\n    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)\n}\n\n.gameboy-b-contBUTTON {\n    content: '';\n    display: inline-block;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    background: rgb(138, 6, 6);\n    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);\n    position: absolute;\n    top: 5rem;\n    margin-left: 1rem;\n}\n\n.gameboy-b-cont:after {\n    content: 'HOME';\n    position: absolute;\n    top: 6rem;\n    color: white;\n    font-size: .4rem;\n    margin-left: .9rem;\n    margin-top: .2rem;\n    font-family: 'PT Sans';\n}\n\n.gameboy-b-cont {\n    background-color: #3f515a;\n    border-radius: .5rem;\n    height: 11rem;\n    margin: 1rem;\n    width: 100%;\n}\n\n.gameboy-screen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n}\n\n\n.gameboy-screen-curve {\n    background: #3f515a;\n    height: 4rem;\n    position: absolute;\n    top: 11.5rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 16rem;\n    border-radius: 0 0 70% 70% / 50px;\n}\n\n.gameboy-screen-curve::before {\n    content: 'GAME BOY COLOR';\n    color: white;\n    position: absolute;\n    top: 1.5rem;\n    left: 3.6rem;\n    font-style: italic;\n    font-family: 'PT Sans';\n}\n\n/* CONTROLLERS */\n\n.gb-up {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 2rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-down {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 4rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-left {\n    position: relative;\n    width: 2rem;\n    height: 1.5rem;\n    top: 1rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n/* .gb-right {\n    position: relative;\n    width: 2rem;\n    height: 1.5rem;\n    top: 1rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n} */\n\n\n/* BUTTONS */\n\n.gb-btn-A {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 2rem;\n    right: -2rem;\n}\n\n.gb-btn-B {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 4rem;\n    right: 0rem;\n}\n\n.gb-letter {\n    margin: .5rem;\n    text-align: center;\n    color: #9E9E9E;\n}\n\n.gb-btn-content {\n    margin-top: 3rem;\n    margin: 4rem 2rem;\n    font-size: .7rem;\n}\n\n.gb-btn-center {\n    display: flex;\n    justify-content: space-around;\n    color: #7c91be;\n}\n\n.gb-btn-on {\n    width: 3rem;\n    height: 1rem;\n    background-color: #3f515a;\n    border-radius: 2rem;\n}\n\n.gameboy-center-dotted {\n    position: absolute;\n    top: 7rem;\n    left: 10rem;\n}\n\n.gb-dotted {\n    width: 3rem;\n    border-bottom: 4px dotted #3f515a;\n    transform: rotate(150deg);\n    height: .4rem;\n}", "",{"version":3,"sources":["webpack://./public/Michelle.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;AAC1B;;AAEA;IACI,mBAAmB;IACnB,aAAa;IACb,sBAAsB;IACtB,sBAAsB;IACtB,uBAAuB;AAC3B;;AAEA;IACI,8BAA8B;IAC9B,4BAA4B;IAC5B,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,YAAY;IACZ,kDAAkD;AACtD;;AAEA;IACI,YAAY;IACZ,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,kBAAkB;IAClB,UAAU;IACV,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,yBAAyB;IACzB,mBAAmB;IACnB,UAAU;IACV,wBAAwB;IACxB,sBAAsB;IACtB,cAAc;AAClB;;AAEA;IACI,8BAA8B;IAC9B,YAAY;IACZ,kBAAkB;IAClB,UAAU;IACV,YAAY;IACZ,UAAU;IACV,YAAY;IACZ,iCAAiC;IACjC;AACJ;;AAEA;IACI,WAAW;IACX,qBAAqB;IACrB,WAAW;IACX,YAAY;IACZ,mBAAmB;IACnB,0BAA0B;IAC1B,qFAAqF;IACrF,kBAAkB;IAClB,SAAS;IACT,iBAAiB;AACrB;;AAEA;IACI,eAAe;IACf,kBAAkB;IAClB,SAAS;IACT,YAAY;IACZ,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;IACjB,sBAAsB;AAC1B;;AAEA;IACI,yBAAyB;IACzB,oBAAoB;IACpB,aAAa;IACb,YAAY;IACZ,WAAW;AACf;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,iBAAiB;AACrB;;;AAGA;IACI,mBAAmB;IACnB,YAAY;IACZ,kBAAkB;IAClB,YAAY;IACZ,YAAY;IACZ,UAAU;IACV,YAAY;IACZ,iCAAiC;AACrC;;AAEA;IACI,yBAAyB;IACzB,YAAY;IACZ,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,sBAAsB;AAC1B;;AAEA,gBAAgB;;AAEhB;IACI,kBAAkB;IAClB,aAAa;IACb,YAAY;IACZ,SAAS;IACT,cAAc;IACd,yBAAyB;IACzB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,YAAY;IACZ,SAAS;IACT,cAAc;IACd,yBAAyB;IACzB,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,WAAW;IACX,cAAc;IACd,SAAS;IACT,WAAW;IACX,yBAAyB;IACzB,oBAAoB;AACxB;;AAEA;;;;;;;;GAQG;;;AAGH,YAAY;;AAEZ;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,yBAAyB;IACzB,SAAS;IACT,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,yBAAyB;IACzB,SAAS;IACT,WAAW;AACf;;AAEA;IACI,aAAa;IACb,kBAAkB;IAClB,cAAc;AAClB;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;IACjB,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,cAAc;AAClB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,yBAAyB;IACzB,mBAAmB;AACvB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,WAAW;AACf;;AAEA;IACI,WAAW;IACX,iCAAiC;IACjC,yBAAyB;IACzB,aAAa;AACjB","sourcesContent":["html {\n    font-size: var(--size);\n}\n\nbody {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    font-family: 'PT Sans';\n    justify-content: center;\n}\n\n.gameboy-body {\n    background: rgb(192, 203, 255);\n    border-radius: 1rem 1rem 0 0;\n    display: flex;\n    height: 26rem;\n    justify-content: center;\n    width: 18rem;\n    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);\n}\n\n.gameboy-footer {\n    color: white;\n    margin-top: 6rem;\n    font-family: 'Press Start 2P';\n}\n\n.gameboy-center-main {\n    height: 11rem;\n    width: 11rem;\n    position: absolute;\n    top: 15rem;\n    border-radius: 0 0 1rem 1rem;\n}\n\n.gameboy-center-brand {\n    text-align: center;\n    border: 1px solid #9ebbee;\n    border-radius: 5rem;\n    width: 60%;\n    margin: 1rem auto 0 auto;\n    font-family: 'PT Sans';\n    color: #7c91be;\n}\n\n.gameboy-curve {\n    background: rgb(192, 203, 255);\n    height: 4rem;\n    position: absolute;\n    top: 26rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 18rem;\n    border-radius: 0 0 50% 50% / 50px;\n    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)\n}\n\n.gameboy-b-contBUTTON {\n    content: '';\n    display: inline-block;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    background: rgb(138, 6, 6);\n    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);\n    position: absolute;\n    top: 5rem;\n    margin-left: 1rem;\n}\n\n.gameboy-b-cont:after {\n    content: 'HOME';\n    position: absolute;\n    top: 6rem;\n    color: white;\n    font-size: .4rem;\n    margin-left: .9rem;\n    margin-top: .2rem;\n    font-family: 'PT Sans';\n}\n\n.gameboy-b-cont {\n    background-color: #3f515a;\n    border-radius: .5rem;\n    height: 11rem;\n    margin: 1rem;\n    width: 100%;\n}\n\n.gameboy-screen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n}\n\n\n.gameboy-screen-curve {\n    background: #3f515a;\n    height: 4rem;\n    position: absolute;\n    top: 11.5rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 16rem;\n    border-radius: 0 0 70% 70% / 50px;\n}\n\n.gameboy-screen-curve::before {\n    content: 'GAME BOY COLOR';\n    color: white;\n    position: absolute;\n    top: 1.5rem;\n    left: 3.6rem;\n    font-style: italic;\n    font-family: 'PT Sans';\n}\n\n/* CONTROLLERS */\n\n.gb-up {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 2rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-down {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 4rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-left {\n    position: relative;\n    width: 2rem;\n    height: 1.5rem;\n    top: 1rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n/* .gb-right {\n    position: relative;\n    width: 2rem;\n    height: 1.5rem;\n    top: 1rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n} */\n\n\n/* BUTTONS */\n\n.gb-btn-A {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 2rem;\n    right: -2rem;\n}\n\n.gb-btn-B {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 4rem;\n    right: 0rem;\n}\n\n.gb-letter {\n    margin: .5rem;\n    text-align: center;\n    color: #9E9E9E;\n}\n\n.gb-btn-content {\n    margin-top: 3rem;\n    margin: 4rem 2rem;\n    font-size: .7rem;\n}\n\n.gb-btn-center {\n    display: flex;\n    justify-content: space-around;\n    color: #7c91be;\n}\n\n.gb-btn-on {\n    width: 3rem;\n    height: 1rem;\n    background-color: #3f515a;\n    border-radius: 2rem;\n}\n\n.gameboy-center-dotted {\n    position: absolute;\n    top: 7rem;\n    left: 10rem;\n}\n\n.gb-dotted {\n    width: 3rem;\n    border-bottom: 4px dotted #3f515a;\n    transform: rotate(150deg);\n    height: .4rem;\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
 
 /***/ }),
 
@@ -47102,6 +47204,60 @@ if (
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ "./node_modules/scheduler/cjs/scheduler.development.js");
 }
+
+
+/***/ }),
+
+/***/ "./public/Michelle.css":
+/*!*****************************!*\
+  !*** ./public/Michelle.css ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Michelle_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!./Michelle.css */ "./node_modules/css-loader/dist/cjs.js!./public/Michelle.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Michelle_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_Michelle_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_Michelle_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_Michelle_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
