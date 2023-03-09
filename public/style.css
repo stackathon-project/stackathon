@@ -1,5 +1,8 @@
+head {
+  align-items: center;
+}
+
 body {
-  position: fixed;
   background-color: #b1d8c5;
   padding: 0;
   margin: 0;
