@@ -7427,7 +7427,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Routing__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Routing__WEBPACK_IMPORTED_MODULE_1__["default"], null);
 }
 
 /***/ }),
@@ -7533,7 +7533,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_Yao_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/Yao.css */ "./public/Yao.css");
+/* harmony import */ var _components_Landing_Icons_Flame_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Landing/Icons/Flame.css */ "./src/components/Landing/Icons/Flame.css");
 /* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 
@@ -7718,11 +7718,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var _Icons_Flames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Icons/Flames */ "./src/components/Landing/Icons/Flames.js");
+/* harmony import */ var _Icons_GameboyIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Icons/GameboyIcon */ "./src/components/Landing/Icons/GameboyIcon.js");
+/* harmony import */ var _Landing_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Landing.css */ "./src/components/Landing/Landing.css");
+
+
+
 
 
 function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "home-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
+    id: "home-nav-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "nav_intro"
   }, "Kimetsu no Yaiba"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "nav_intro"
@@ -7736,13 +7746,280 @@ function Home() {
     className: "fa fa-caret-down"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "dropdown-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/"
-  }, "\u26E9\uFE0FHome\u26E9\uFE0F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, "\u26E9\uFE0FHome\u26E9\uFE0F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/yao"
-  }, "Yao"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }, "Yao"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/michelle"
-  }, "Michelle")))));
+  }, "Michelle"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "home-icon-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Icons_Flames__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Icons_GameboyIcon__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+}
+
+/***/ }),
+
+/***/ "./src/components/Landing/Icons/Flames.js":
+/*!************************************************!*\
+  !*** ./src/components/Landing/Icons/Flames.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Flames)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Flame_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Flame.css */ "./src/components/Landing/Icons/Flame.css");
+/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+
+
+
+
+function Flames() {
+  function animateBaseFire() {
+    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+      targets: "#base-fire .cf-flame",
+      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(300),
+      translateY: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -10);
+      },
+      keyframes: [{
+        scale: 0.8
+      }, {
+        scale: 0.825
+      }, {
+        scale: 0.9
+      }, {
+        scale: 0.925
+      }, {
+        scale: 1
+      }],
+      duration: 300,
+      easing: "easeInOutSine",
+      loop: true
+    });
+  }
+  function animateFlame1() {
+    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+      targets: "#fireNodes1 .cf-flame",
+      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(100),
+      translateY: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 300);
+      },
+      rotate: 30,
+      opacity: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0.5, 1);
+      },
+      translateX: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -60);
+      },
+      scale: 0,
+      skew: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 10);
+      },
+      loop: true,
+      easing: "easeInOutSine"
+    });
+  }
+  function animateFlame2() {
+    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+      targets: "#fireNodes2 .cf-flame",
+      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(400),
+      translateX: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-30, 0);
+      },
+      translateY: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -260);
+      },
+      translateY: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-260, -160);
+      },
+      translateX: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -30);
+      },
+      scale: 0,
+      rotate: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 60);
+      },
+      skew: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 30);
+      },
+      loop: true,
+      easing: "easeInOutSine"
+    });
+  }
+  function animateFlame3() {
+    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+      targets: "#fireNodes1 .cf-flame",
+      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(500),
+      translateY: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-300, -200);
+      },
+      opacity: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 1);
+      },
+      translateX: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-50, 50);
+      },
+      scale: 0,
+      rotate: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -30);
+      },
+      skew: function () {
+        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 20);
+      },
+      loop: true,
+      easing: "easeInOutSine"
+    });
+  }
+  const handleAnime = () => {
+    animateFlame1();
+    animateFlame2();
+    animateFlame3();
+    animateBaseFire();
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    handleAnime();
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "yao"
+  }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame-container",
+    id: "fireNodes1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame-container",
+    id: "fireNodes2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame-container",
+    id: "base-fire"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-flame"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    to: "/michelle"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-log-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-log"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "cf-log"
+  })))));
+}
+
+/***/ }),
+
+/***/ "./src/components/Landing/Icons/GameboyIcon.js":
+/*!*****************************************************!*\
+  !*** ./src/components/Landing/Icons/GameboyIcon.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Gameboy)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Flames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Flames */ "./src/components/Landing/Icons/Flames.js");
+/* harmony import */ var _Gameboy_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Gameboy.css */ "./src/components/Landing/Icons/Gameboy.css");
+/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
+
+
+
+
+
+function Gameboy() {
+  let PATH = {
+    chickIcon: ".chick-icon"
+  };
+  let chickJumpAnimation;
+  const jumpKeyframes = {
+    scaleY: [{
+      value: 0.75,
+      duration: 170
+    }, {
+      value: 1,
+      duration: 170,
+      delay: 120
+    }],
+    translateY: [{
+      value: -20,
+      duration: 170,
+      delay: 170
+    }, {
+      value: 0,
+      duration: 170,
+      delay: 220
+    }]
+  };
+  const _revealVert = (bottomY, easing, delay) => ({
+    translateY: [bottomY, 0],
+    opacity: [0, 1],
+    easing: easing,
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_3__["default"].stagger(delay)
+  });
+  const chickIconAnimation = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_3__["default"])({
+    targets: `${PATH.chickIcon}`,
+    ..._revealVert(25, "easeOutElastic", 100),
+    complete: function () {
+      const chick = document.querySelector(PATH.chickIcon);
+      chick.style.transformOrigin = "center bottom";
+      chickJumpAnimation = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_3__["default"])({
+        targets: `${PATH.chickIcon}`,
+        ...jumpKeyframes,
+        loop: true,
+        easing: "linear"
+      });
+    }
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "GameBoyIcon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "icon-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "icon chick-icon",
+    id: "gameboy-icon-pic"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://cdn-icons-png.flaticon.com/512/1135/1135231.png",
+    width: "150px",
+    height: "150px"
+  }))));
 }
 
 /***/ }),
@@ -7766,26 +8043,78 @@ const store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.configureStore)({
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./public/Yao.css":
-/*!**************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./public/Yao.css ***!
-  \**************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Icons/Flame.css":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Icons/Flame.css ***!
+  \**************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#yao {\n  background-color: #372113;\n  width: 100vw;\n  height: 100vh;\n  position: relative;\n}\n\n.cf-container {\n  box-sizing: content-box;\n  width: 300px;\n  height: 300px;\n  position: relative;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.cf-container .cf-flame-container {\n  width: 100px;\n  height: 100px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-log-container {\n  width: 60%;\n  height: 100px;\n  position: absolute;\n  bottom: 0px;\n  left: 50px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(1) {\n  background: #c63509;\n  opacity: 0.95;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(2) {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  opacity: 0.85;\n  left: 75px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(3) {\n  background: #d73e0f;\n  width: 60px;\n  height: 60px;\n  opacity: 0.85;\n  left: 130px;\n}\n.cf-container .cf-flame-container:nth-child(2) {\n  width: 150px;\n  height: 150px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-flame-container:nth-child(2) .cf-flame {\n  width: 75px;\n  height: 75px;\n  left: 75px;\n}\n\n.cf-log {\n  background: #723830;\n  width: 20px;\n  height: 30px;\n  transform-origin: center;\n  position: absolute;\n  bottom: 0px;\n  border-radius: 0.5em;\n  box-shadow: 0 3px 10px #372113;\n  width: 100%;\n}\n.cf-log:nth-child(1) {\n  transform: rotate(15deg);\n}\n.cf-log:nth-child(2) {\n  transform: rotate(-15deg);\n}\n.cf-flame:nth-child(1) {\n  background: #f5ed8f;\n}\n.cf-flame:nth-child(2) {\n  background: #fde239;\n}\n.cf-flame:nth-child(3) {\n  background: #ffdc01;\n}\n.cf-flame:nth-child(4) {\n  background: #fdac01;\n}\n.cf-flame:nth-child(5) {\n  background: #d73e0f;\n}\n.cf-flame:nth-child(6) {\n  background: #cd4015;\n}\n.cf-flame:nth-child(7) {\n  background: #c63509;\n}\n.cf-flame:last-child {\n  background: #c63509;\n}\n.cf-flame {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  border-radius: 1em;\n  position: absolute;\n  bottom: 0px;\n  left: 100px;\n}\n\n#fireNodes2 .cf-flame {\n  -webkit-animation: flameColor 1.5s ease-out infinite;\n  animation: flameColor 1.5s ease-out infinite;\n}\n\n@-webkit-keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n\n@keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n", "",{"version":3,"sources":["webpack://./public/Yao.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;EACzB,YAAY;EACZ,aAAa;EACb,kBAAkB;AACpB;;AAEA;EACE,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,gCAAgC;AAClC;AACA;EACE,YAAY;EACZ,aAAa;EACb,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,UAAU;EACV,aAAa;EACb,kBAAkB;EAClB,WAAW;EACX,UAAU;AACZ;AACA;EACE,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,aAAa;EACb,UAAU;AACZ;AACA;EACE,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,aAAa;EACb,WAAW;AACb;AACA;EACE,YAAY;EACZ,aAAa;EACb,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,WAAW;EACX,YAAY;EACZ,UAAU;AACZ;;AAEA;EACE,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,wBAAwB;EACxB,kBAAkB;EAClB,WAAW;EACX,oBAAoB;EACpB,8BAA8B;EAC9B,WAAW;AACb;AACA;EACE,wBAAwB;AAC1B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,kBAAkB;EAClB,WAAW;EACX,WAAW;AACb;;AAEA;EACE,oDAAoD;EACpD,4CAA4C;AAC9C;;AAEA;EACE;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;AACF;;AAEA;EACE;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;AACF","sourcesContent":["#yao {\n  background-color: #372113;\n  width: 100vw;\n  height: 100vh;\n  position: relative;\n}\n\n.cf-container {\n  box-sizing: content-box;\n  width: 300px;\n  height: 300px;\n  position: relative;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.cf-container .cf-flame-container {\n  width: 100px;\n  height: 100px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-log-container {\n  width: 60%;\n  height: 100px;\n  position: absolute;\n  bottom: 0px;\n  left: 50px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(1) {\n  background: #c63509;\n  opacity: 0.95;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(2) {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  opacity: 0.85;\n  left: 75px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(3) {\n  background: #d73e0f;\n  width: 60px;\n  height: 60px;\n  opacity: 0.85;\n  left: 130px;\n}\n.cf-container .cf-flame-container:nth-child(2) {\n  width: 150px;\n  height: 150px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-flame-container:nth-child(2) .cf-flame {\n  width: 75px;\n  height: 75px;\n  left: 75px;\n}\n\n.cf-log {\n  background: #723830;\n  width: 20px;\n  height: 30px;\n  transform-origin: center;\n  position: absolute;\n  bottom: 0px;\n  border-radius: 0.5em;\n  box-shadow: 0 3px 10px #372113;\n  width: 100%;\n}\n.cf-log:nth-child(1) {\n  transform: rotate(15deg);\n}\n.cf-log:nth-child(2) {\n  transform: rotate(-15deg);\n}\n.cf-flame:nth-child(1) {\n  background: #f5ed8f;\n}\n.cf-flame:nth-child(2) {\n  background: #fde239;\n}\n.cf-flame:nth-child(3) {\n  background: #ffdc01;\n}\n.cf-flame:nth-child(4) {\n  background: #fdac01;\n}\n.cf-flame:nth-child(5) {\n  background: #d73e0f;\n}\n.cf-flame:nth-child(6) {\n  background: #cd4015;\n}\n.cf-flame:nth-child(7) {\n  background: #c63509;\n}\n.cf-flame:last-child {\n  background: #c63509;\n}\n.cf-flame {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  border-radius: 1em;\n  position: absolute;\n  bottom: 0px;\n  left: 100px;\n}\n\n#fireNodes2 .cf-flame {\n  -webkit-animation: flameColor 1.5s ease-out infinite;\n  animation: flameColor 1.5s ease-out infinite;\n}\n\n@-webkit-keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n\n@keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#yao {\n  background-color: #e9f5ee;\n  /* width: 100vw;\n  height: 100vh; */\n  position: relative;\n}\n\n.cf-container {\n  box-sizing: content-box;\n  width: 300px;\n  height: 300px;\n  position: relative;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.cf-container .cf-flame-container {\n  width: 100px;\n  height: 100px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-log-container {\n  width: 60%;\n  height: 100px;\n  position: absolute;\n  bottom: 0px;\n  left: 50px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(1) {\n  background: #c63509;\n  opacity: 0.95;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(2) {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  opacity: 0.85;\n  left: 75px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(3) {\n  background: #d73e0f;\n  width: 60px;\n  height: 60px;\n  opacity: 0.85;\n  left: 130px;\n}\n.cf-container .cf-flame-container:nth-child(2) {\n  width: 150px;\n  height: 150px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-flame-container:nth-child(2) .cf-flame {\n  width: 75px;\n  height: 75px;\n  left: 75px;\n}\n\n.cf-log {\n  background: #723830;\n  width: 20px;\n  height: 30px;\n  transform-origin: center;\n  position: absolute;\n  bottom: 0px;\n  border-radius: 0.5em;\n  box-shadow: 0 3px 10px #372113;\n  width: 100%;\n}\n.cf-log:nth-child(1) {\n  transform: rotate(15deg);\n}\n.cf-log:nth-child(2) {\n  transform: rotate(-15deg);\n}\n.cf-flame:nth-child(1) {\n  background: #f5ed8f;\n}\n.cf-flame:nth-child(2) {\n  background: #fde239;\n}\n.cf-flame:nth-child(3) {\n  background: #ffdc01;\n}\n.cf-flame:nth-child(4) {\n  background: #fdac01;\n}\n.cf-flame:nth-child(5) {\n  background: #d73e0f;\n}\n.cf-flame:nth-child(6) {\n  background: #cd4015;\n}\n.cf-flame:nth-child(7) {\n  background: #c63509;\n}\n.cf-flame:last-child {\n  background: #c63509;\n}\n.cf-flame {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  border-radius: 1em;\n  position: absolute;\n  bottom: 0px;\n  left: 100px;\n}\n\n#fireNodes2 .cf-flame {\n  -webkit-animation: flameColor 1.5s ease-out infinite;\n  animation: flameColor 1.5s ease-out infinite;\n}\n\n@-webkit-keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n\n@keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n", "",{"version":3,"sources":["webpack://./src/components/Landing/Icons/Flame.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;EACzB;kBACgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,QAAQ;EACR,SAAS;EACT,gCAAgC;AAClC;AACA;EACE,YAAY;EACZ,aAAa;EACb,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,UAAU;EACV,aAAa;EACb,kBAAkB;EAClB,WAAW;EACX,UAAU;AACZ;AACA;EACE,mBAAmB;EACnB,aAAa;AACf;AACA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,aAAa;EACb,UAAU;AACZ;AACA;EACE,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,aAAa;EACb,WAAW;AACb;AACA;EACE,YAAY;EACZ,aAAa;EACb,WAAW;EACX,kBAAkB;AACpB;AACA;EACE,WAAW;EACX,YAAY;EACZ,UAAU;AACZ;;AAEA;EACE,mBAAmB;EACnB,WAAW;EACX,YAAY;EACZ,wBAAwB;EACxB,kBAAkB;EAClB,WAAW;EACX,oBAAoB;EACpB,8BAA8B;EAC9B,WAAW;AACb;AACA;EACE,wBAAwB;AAC1B;AACA;EACE,yBAAyB;AAC3B;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,kBAAkB;EAClB,WAAW;EACX,WAAW;AACb;;AAEA;EACE,oDAAoD;EACpD,4CAA4C;AAC9C;;AAEA;EACE;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;AACF;;AAEA;EACE;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;EACA;IACE,mBAAmB;EACrB;AACF","sourcesContent":["#yao {\n  background-color: #e9f5ee;\n  /* width: 100vw;\n  height: 100vh; */\n  position: relative;\n}\n\n.cf-container {\n  box-sizing: content-box;\n  width: 300px;\n  height: 300px;\n  position: relative;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.cf-container .cf-flame-container {\n  width: 100px;\n  height: 100px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-log-container {\n  width: 60%;\n  height: 100px;\n  position: absolute;\n  bottom: 0px;\n  left: 50px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(1) {\n  background: #c63509;\n  opacity: 0.95;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(2) {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  opacity: 0.85;\n  left: 75px;\n}\n.cf-container .cf-flame-container#base-fire .cf-flame:nth-child(3) {\n  background: #d73e0f;\n  width: 60px;\n  height: 60px;\n  opacity: 0.85;\n  left: 130px;\n}\n.cf-container .cf-flame-container:nth-child(2) {\n  width: 150px;\n  height: 150px;\n  bottom: 0px;\n  position: absolute;\n}\n.cf-container .cf-flame-container:nth-child(2) .cf-flame {\n  width: 75px;\n  height: 75px;\n  left: 75px;\n}\n\n.cf-log {\n  background: #723830;\n  width: 20px;\n  height: 30px;\n  transform-origin: center;\n  position: absolute;\n  bottom: 0px;\n  border-radius: 0.5em;\n  box-shadow: 0 3px 10px #372113;\n  width: 100%;\n}\n.cf-log:nth-child(1) {\n  transform: rotate(15deg);\n}\n.cf-log:nth-child(2) {\n  transform: rotate(-15deg);\n}\n.cf-flame:nth-child(1) {\n  background: #f5ed8f;\n}\n.cf-flame:nth-child(2) {\n  background: #fde239;\n}\n.cf-flame:nth-child(3) {\n  background: #ffdc01;\n}\n.cf-flame:nth-child(4) {\n  background: #fdac01;\n}\n.cf-flame:nth-child(5) {\n  background: #d73e0f;\n}\n.cf-flame:nth-child(6) {\n  background: #cd4015;\n}\n.cf-flame:nth-child(7) {\n  background: #c63509;\n}\n.cf-flame:last-child {\n  background: #c63509;\n}\n.cf-flame {\n  background: #cd4015;\n  width: 100px;\n  height: 100px;\n  border-radius: 1em;\n  position: absolute;\n  bottom: 0px;\n  left: 100px;\n}\n\n#fireNodes2 .cf-flame {\n  -webkit-animation: flameColor 1.5s ease-out infinite;\n  animation: flameColor 1.5s ease-out infinite;\n}\n\n@-webkit-keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n\n@keyframes flameColor {\n  0% {\n    background: #c63509;\n  }\n  20% {\n    background: #cd4015;\n  }\n  30% {\n    background: #fdac01;\n  }\n  50% {\n    background: #ffb401;\n  }\n  60% {\n    background: #fdac01;\n  }\n  70% {\n    background: #ffdc01;\n  }\n  80% {\n    background: #fde239;\n  }\n  100% {\n    background: #f5ed8f;\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Icons/Gameboy.css":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Icons/Gameboy.css ***!
+  \****************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#GameBoyIcon {\n  display: flex;\n  align-items: flex-end;\n}\n\n.icon-block {\n  align-self: flex-end;\n}\n\n#gameboy-icon-pic {\n  position: relative;\n  bottom: -30px;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Landing/Icons/Gameboy.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,qBAAqB;AACvB;;AAEA;EACE,oBAAoB;AACtB;;AAEA;EACE,kBAAkB;EAClB,aAAa;AACf","sourcesContent":["#GameBoyIcon {\n  display: flex;\n  align-items: flex-end;\n}\n\n.icon-block {\n  align-self: flex-end;\n}\n\n#gameboy-icon-pic {\n  position: relative;\n  bottom: -30px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Landing.css":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Landing.css ***!
+  \**********************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#home-icon-container {\n  display: flex;\n}\n#home-container {\n  display: flex;\n  background-color: #98c3ae;\n  border-radius: 5px;\n  margin: 75px;\n  padding: 50px;\n  border-radius: 25px;\n  background-color: #e9f5ee;\n  opacity: 0.9;\n  color: #e54a4a;\n  display: flex;\n  flex-direction: column;\n  height: 75vh;\n  justify-content: space-between;\n  font-family: \"Lucida Sans\", \"Lucida Sans Regular\", \"Lucida Grande\",\n    \"Lucida Sans Unicode\", Geneva, Verdana, sans-serif;\n}\n\n#home-nav-bar {\n  align-items: center;\n  padding: 50px;\n  border-radius: 25px;\n  background-color: #42585f;\n  opacity: 0.9;\n  color: #e54a4a;\n  display: flex;\n  height: 50px;\n  width: 100%;\n  padding: 10px;\n  justify-content: space-between;\n  font-family: \"Lucida Sans\", \"Lucida Sans Regular\", \"Lucida Grande\",\n    \"Lucida Sans Unicode\", Geneva, Verdana, sans-serif;\n}\n#nav_intro {\n  justify-content: center;\n  font-size: large;\n}\n.dropdown {\n  float: left;\n  overflow: hidden;\n}\n.navbar {\n  margin: 10 10 10 10;\n}\n.dropdown .dropbtn {\n  font-size: 16px;\n  border: none;\n  outline: none;\n  color: white;\n  padding: 14px 16px;\n  background-color: inherit;\n  font-family: inherit;\n  margin: 0;\n}\n\n.dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #f9f9f9;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 1;\n}\n.dropdown-content a {\n  float: none;\n  color: rgb(225, 82, 82);\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n  text-align: left;\n}\n.dropdown:hover .dropdown-content {\n  display: block;\n}\n.dropdown-content a:hover {\n  background-color: #ddd;\n}\n\n.dropdown-content button {\n  float: none;\n  color: rgb(225, 82, 82);\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n  text-align: left;\n  border: none;\n  outline: none;\n}\n.dropdown-content button:hover {\n  background-color: #ddd;\n}\n", "",{"version":3,"sources":["webpack://./src/components/Landing/Landing.css"],"names":[],"mappings":"AAAA;EACE,aAAa;AACf;AACA;EACE,aAAa;EACb,yBAAyB;EACzB,kBAAkB;EAClB,YAAY;EACZ,aAAa;EACb,mBAAmB;EACnB,yBAAyB;EACzB,YAAY;EACZ,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,YAAY;EACZ,8BAA8B;EAC9B;sDACoD;AACtD;;AAEA;EACE,mBAAmB;EACnB,aAAa;EACb,mBAAmB;EACnB,yBAAyB;EACzB,YAAY;EACZ,cAAc;EACd,aAAa;EACb,YAAY;EACZ,WAAW;EACX,aAAa;EACb,8BAA8B;EAC9B;sDACoD;AACtD;AACA;EACE,uBAAuB;EACvB,gBAAgB;AAClB;AACA;EACE,WAAW;EACX,gBAAgB;AAClB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,YAAY;EACZ,kBAAkB;EAClB,yBAAyB;EACzB,oBAAoB;EACpB,SAAS;AACX;;AAEA;EACE,aAAa;EACb,kBAAkB;EAClB,yBAAyB;EACzB,gBAAgB;EAChB,+CAA+C;EAC/C,UAAU;AACZ;AACA;EACE,WAAW;EACX,uBAAuB;EACvB,kBAAkB;EAClB,qBAAqB;EACrB,cAAc;EACd,gBAAgB;AAClB;AACA;EACE,cAAc;AAChB;AACA;EACE,sBAAsB;AACxB;;AAEA;EACE,WAAW;EACX,uBAAuB;EACvB,kBAAkB;EAClB,qBAAqB;EACrB,cAAc;EACd,gBAAgB;EAChB,YAAY;EACZ,aAAa;AACf;AACA;EACE,sBAAsB;AACxB","sourcesContent":["#home-icon-container {\n  display: flex;\n}\n#home-container {\n  display: flex;\n  background-color: #98c3ae;\n  border-radius: 5px;\n  margin: 75px;\n  padding: 50px;\n  border-radius: 25px;\n  background-color: #e9f5ee;\n  opacity: 0.9;\n  color: #e54a4a;\n  display: flex;\n  flex-direction: column;\n  height: 75vh;\n  justify-content: space-between;\n  font-family: \"Lucida Sans\", \"Lucida Sans Regular\", \"Lucida Grande\",\n    \"Lucida Sans Unicode\", Geneva, Verdana, sans-serif;\n}\n\n#home-nav-bar {\n  align-items: center;\n  padding: 50px;\n  border-radius: 25px;\n  background-color: #42585f;\n  opacity: 0.9;\n  color: #e54a4a;\n  display: flex;\n  height: 50px;\n  width: 100%;\n  padding: 10px;\n  justify-content: space-between;\n  font-family: \"Lucida Sans\", \"Lucida Sans Regular\", \"Lucida Grande\",\n    \"Lucida Sans Unicode\", Geneva, Verdana, sans-serif;\n}\n#nav_intro {\n  justify-content: center;\n  font-size: large;\n}\n.dropdown {\n  float: left;\n  overflow: hidden;\n}\n.navbar {\n  margin: 10 10 10 10;\n}\n.dropdown .dropbtn {\n  font-size: 16px;\n  border: none;\n  outline: none;\n  color: white;\n  padding: 14px 16px;\n  background-color: inherit;\n  font-family: inherit;\n  margin: 0;\n}\n\n.dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #f9f9f9;\n  min-width: 160px;\n  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);\n  z-index: 1;\n}\n.dropdown-content a {\n  float: none;\n  color: rgb(225, 82, 82);\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n  text-align: left;\n}\n.dropdown:hover .dropdown-content {\n  display: block;\n}\n.dropdown-content a:hover {\n  background-color: #ddd;\n}\n\n.dropdown-content button {\n  float: none;\n  color: rgb(225, 82, 82);\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n  text-align: left;\n  border: none;\n  outline: none;\n}\n.dropdown-content button:hover {\n  background-color: #ddd;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -47106,29 +47435,29 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./public/Yao.css":
-/*!************************!*\
-  !*** ./public/Yao.css ***!
-  \************************/
+/***/ "./src/components/Landing/Icons/Flame.css":
+/*!************************************************!*\
+  !*** ./src/components/Landing/Icons/Flame.css ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Yao_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!./Yao.css */ "./node_modules/css-loader/dist/cjs.js!./public/Yao.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Flame_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!./Flame.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Icons/Flame.css");
 
       
       
@@ -47150,12 +47479,120 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Yao_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Flame_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_Yao_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_Yao_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_Yao_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_Flame_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_Flame_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_Flame_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Landing/Icons/Gameboy.css":
+/*!**************************************************!*\
+  !*** ./src/components/Landing/Icons/Gameboy.css ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Gameboy_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!./Gameboy.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Icons/Gameboy.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Gameboy_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_Gameboy_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_Gameboy_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_Gameboy_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Landing/Landing.css":
+/*!********************************************!*\
+  !*** ./src/components/Landing/Landing.css ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_Landing_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./Landing.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/Landing/Landing.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_Landing_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_Landing_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_Landing_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_Landing_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),

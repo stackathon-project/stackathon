@@ -1,8 +1,11 @@
 body {
-  position: fixed;
+  /* position: fixed; */
   background-color: #b1d8c5;
-  padding: 0;
+
+  /* padding: 0;
   margin: 0;
+  width: 100vh;
+  height: 100vh; */
 }
 
 .outside {

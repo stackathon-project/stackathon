@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "./components/Landing/Icons/Flame.css";
+import "./Flame.css";
 import anime from "animejs/lib/anime.es.js";
 import { Link, Routes, Route } from "react-router-dom";
 
-export default function Yao() {
+export default function Flames() {
   function animateBaseFire() {
     anime({
       targets: "#base-fire .cf-flame",
