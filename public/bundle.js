@@ -7574,9 +7574,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
-/* harmony import */ var _Yao__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Yao */ "./src/Yao.js");
-/* harmony import */ var _Michelle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Michelle */ "./src/Michelle.js");
-/* harmony import */ var _components_Landing_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Landing/Home */ "./src/components/Landing/Home.js");
+/* harmony import */ var _Michelle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Michelle */ "./src/Michelle.js");
+/* harmony import */ var _components_Landing_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Landing/Home */ "./src/components/Landing/Home.js");
+/* harmony import */ var _components_GameRoutes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/GameRoutes */ "./src/components/GameRoutes/index.js");
 
 
 
@@ -7584,200 +7584,209 @@ __webpack_require__.r(__webpack_exports__);
 
 function Routing() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
-    path: "/yao",
-    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Yao__WEBPACK_IMPORTED_MODULE_1__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
     path: "/michelle",
-    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Michelle__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Michelle__WEBPACK_IMPORTED_MODULE_1__["default"], null)
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
     path: "/",
-    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Landing_Home__WEBPACK_IMPORTED_MODULE_3__["default"], null)
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Landing_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Route, {
+    path: "/gameroutes",
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_GameRoutes__WEBPACK_IMPORTED_MODULE_3__["default"], null)
   }));
 }
 
 /***/ }),
 
-/***/ "./src/Yao.js":
-/*!********************!*\
-  !*** ./src/Yao.js ***!
-  \********************/
+/***/ "./src/components/GameRoutes/Gameboy.js":
+/*!**********************************************!*\
+  !*** ./src/components/GameRoutes/Gameboy.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Yao)
+/* harmony export */   "default": () => (/* binding */ Gameboy)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Landing_Icons_Flame_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Landing/Icons/Flame.css */ "./src/components/Landing/Icons/Flame.css");
+/* harmony import */ var _Landing_Icons_Gameboy_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Landing/Icons/Gameboy.css */ "./src/components/Landing/Icons/Gameboy.css");
 /* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 
 
 
 
-function Yao() {
-  function animateBaseFire() {
-    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
-      targets: "#base-fire .cf-flame",
-      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(300),
-      translateY: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -10);
-      },
-      keyframes: [{
-        scale: 0.8
-      }, {
-        scale: 0.825
-      }, {
-        scale: 0.9
-      }, {
-        scale: 0.925
-      }, {
-        scale: 1
-      }],
-      duration: 300,
-      easing: "easeInOutSine",
-      loop: true
-    });
-  }
-  function animateFlame1() {
-    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
-      targets: "#fireNodes1 .cf-flame",
-      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(100),
-      translateY: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 300);
-      },
-      rotate: 30,
-      opacity: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0.5, 1);
-      },
-      translateX: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -60);
-      },
-      scale: 0,
-      skew: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 10);
-      },
-      loop: true,
-      easing: "easeInOutSine"
-    });
-  }
-  function animateFlame2() {
-    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
-      targets: "#fireNodes2 .cf-flame",
-      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(400),
-      translateX: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-30, 0);
-      },
-      translateY: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -260);
-      },
-      translateY: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-260, -160);
-      },
-      translateX: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -30);
-      },
-      scale: 0,
-      rotate: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 60);
-      },
-      skew: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 30);
-      },
-      loop: true,
-      easing: "easeInOutSine"
-    });
-  }
-  function animateFlame3() {
-    (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
-      targets: "#fireNodes1 .cf-flame",
-      delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(500),
-      translateY: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-300, -200);
-      },
-      opacity: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 1);
-      },
-      translateX: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(-50, 50);
-      },
-      scale: 0,
-      rotate: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, -30);
-      },
-      skew: function () {
-        return animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].random(0, 20);
-      },
-      loop: true,
-      easing: "easeInOutSine"
-    });
-  }
-  const handleAnime = () => {
-    animateFlame1();
-    animateFlame2();
-    animateFlame3();
-    animateBaseFire();
+function Gameboy() {
+  let PATH = {
+    chickIcon: ".chick-icon"
   };
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    handleAnime();
-  }, []);
+  let chickJumpAnimation;
+  const jumpKeyframes = {
+    scaleY: [{
+      value: 0.75,
+      duration: 170
+    }, {
+      value: 1,
+      duration: 170,
+      delay: 120
+    }],
+    translateY: [{
+      value: -20,
+      duration: 170,
+      delay: 170
+    }, {
+      value: 0,
+      duration: 170,
+      delay: 220
+    }]
+  };
+  const _revealVert = (bottomY, easing, delay) => ({
+    translateY: [bottomY, 0],
+    opacity: [0, 1],
+    easing: easing,
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(delay)
+  });
+  const chickIconAnimation = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+    targets: `${PATH.chickIcon}`,
+    ..._revealVert(25, "easeOutElastic", 100),
+    complete: function () {
+      const chick = document.querySelector(PATH.chickIcon);
+      chick.style.transformOrigin = "center bottom";
+      chickJumpAnimation = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+        targets: `${PATH.chickIcon}`,
+        ...jumpKeyframes,
+        loop: true,
+        easing: "linear"
+      });
+    }
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "yao"
-  }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-container"
+    id: "GameBoyIcon"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame-container",
-    id: "fireNodes1"
+    className: "icon-block"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame-container",
-    id: "fireNodes2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame-container",
-    id: "base-fire"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-flame"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    className: "icon chick-icon",
+    id: "gameboy-icon-pic"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
     to: "/michelle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-log-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-log"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "cf-log"
+  }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://cdn-icons-png.flaticon.com/512/1135/1135231.png",
+    width: "150px",
+    height: "150px"
   })))));
+}
+
+/***/ }),
+
+/***/ "./src/components/GameRoutes/Ranking.js":
+/*!**********************************************!*\
+  !*** ./src/components/GameRoutes/Ranking.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Gameboy)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Landing_Icons_Gameboy_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Landing/Icons/Gameboy.css */ "./src/components/Landing/Icons/Gameboy.css");
+/* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+
+
+
+
+function Gameboy() {
+  let PATH = {
+    chickIcon: ".chick-icon"
+  };
+  let chickJumpAnimation;
+  const jumpKeyframes = {
+    scaleY: [{
+      value: 0.75,
+      duration: 170
+    }, {
+      value: 1,
+      duration: 170,
+      delay: 120
+    }],
+    translateY: [{
+      value: -20,
+      duration: 170,
+      delay: 170
+    }, {
+      value: 0,
+      duration: 170,
+      delay: 220
+    }]
+  };
+  const _revealVert = (bottomY, easing, delay) => ({
+    translateY: [bottomY, 0],
+    opacity: [0, 1],
+    easing: easing,
+    delay: animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"].stagger(delay)
+  });
+  const chickIconAnimation = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+    targets: `${PATH.chickIcon}`,
+    ..._revealVert(25, "easeOutElastic", 100),
+    complete: function () {
+      const chick = document.querySelector(PATH.chickIcon);
+      chick.style.transformOrigin = "center bottom";
+      chickJumpAnimation = (0,animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_2__["default"])({
+        targets: `${PATH.chickIcon}`,
+        ...jumpKeyframes,
+        loop: true,
+        easing: "linear"
+      });
+    }
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "GameBoyIcon"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "icon-block"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "icon chick-icon",
+    id: "gameboy-icon-pic"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+    to: "/games/ranking"
+  }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "https://cdn-icons-png.flaticon.com/512/559/559771.png\n",
+    width: "150px",
+    height: "150px"
+  })))));
+}
+
+/***/ }),
+
+/***/ "./src/components/GameRoutes/index.js":
+/*!********************************************!*\
+  !*** ./src/components/GameRoutes/index.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Home)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Landing_Icons_Flames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Landing/Icons/Flames */ "./src/components/Landing/Icons/Flames.js");
+/* harmony import */ var _Gameboy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Gameboy */ "./src/components/GameRoutes/Gameboy.js");
+/* harmony import */ var _Ranking__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Ranking */ "./src/components/GameRoutes/Ranking.js");
+/* harmony import */ var _Landing_Landing_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Landing/Landing.css */ "./src/components/Landing/Landing.css");
+
+
+
+
+
+
+function Home() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "home-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "home-icon-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Gameboy__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Ranking__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 }
 
 /***/ }),
@@ -7829,8 +7838,6 @@ function Home() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
     to: "/"
   }, "\u26E9\uFE0FHome\u26E9\uFE0F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
-    to: "/yao"
-  }, "Yao"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
     to: "/michelle"
   }, "Michelle"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home-title"
@@ -8099,7 +8106,7 @@ function Gameboy() {
     className: "icon chick-icon",
     id: "gameboy-icon-pic"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-    to: "/michelle"
+    to: "/gameroutes"
   }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: "https://cdn-icons-png.flaticon.com/512/1135/1135231.png",
     width: "150px",

@@ -21,7 +21,6 @@ export default function Home() {
             </button>
             <div className="dropdown-content">
               <Link to="/">⛩️Home⛩️</Link>
-              <Link to="/yao">Yao</Link>
               <Link to="/michelle">Michelle</Link>
             </div>
           </div>
