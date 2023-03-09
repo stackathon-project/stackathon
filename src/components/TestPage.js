@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "../firebase";
+import SignIn from "./Auth/SignIn";
+import Michelle from "../Michelle";
 
-export default function Auth() {
+export default function TestPage() {
   const [authUser, setAuthUser] = useState(null);
-
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -23,16 +24,17 @@ export default function Auth() {
       .then(() => console.log("signedout"))
       .catch((error) => console.log(error));
   };
+
   return (
     <div>
       {authUser ? (
         <>
           {" "}
-          <p>Signed in</p>
+          <Michelle />
           <button onClick={userSignOut}>SignOut</button>
         </>
       ) : (
-        <p>Signed Out</p>
+        <SignIn />
       )}{" "}
     </div>
   );
