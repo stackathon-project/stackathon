@@ -1,0 +1,13 @@
+#GameBoyIcon {
+  display: flex;
+  align-items: flex-end;
+}
+
+.icon-block {
+  align-self: flex-end;
+}
+
+#gameboy-icon-pic {
+  position: relative;
+  bottom: -30px;
+}
