@@ -22,6 +22,8 @@ export default function Home() {
             <div className="dropdown-content">
               <Link to="/">⛩️Home⛩️</Link>
               <Link to="/michelle">Michelle</Link>
+              <Link to="/signup">Sign Up</Link>
+              <Link to="/signin">Sign In</Link>
             </div>
           </div>
         </div>
