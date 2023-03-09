@@ -50,11 +50,14 @@ export default function Gameboy() {
     <div id="GameBoyIcon">
       <div className="icon-block">
         <div className="icon chick-icon" id="gameboy-icon-pic">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1135/1135231.png"
-            width="150px"
-            height="150px"
-          ></img>
+          <Link to="/michelle">
+            {" "}
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1135/1135231.png"
+              width="150px"
+              height="150px"
+            ></img>
+          </Link>
         </div>
       </div>
     </div>
