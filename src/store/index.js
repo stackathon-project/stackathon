@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import MathGameSlice from "./MathGameSlice";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    MathGame: MathGameSlice,
+  },
 });
 
 export default store;
