@@ -1,7 +1,27 @@
-import { random } from "animejs";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { UploadScore } from "../store/MathGameSlice";
+import { auth } from "../firebase";
 
 export default function TestGame() {
+  const [authUser, setAuthUser] = useState(null);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user);
+        console.log(user.email);
+      } else {
+        setAuthUser(null);
+      }
+    });
+    return () => {
+      listen();
+    };
+  }, []);
+
   const [score, setScore] = useState(0);
   const [question, setQuestion] = useState("");
   const [Panswer, setPAnswer] = useState(0);
@@ -40,7 +60,7 @@ export default function TestGame() {
     setQuestion(`${number1} ${randomExpression} ${number2}`);
   }
 
-  function checkAnswer() {
+  const checkAnswer = async () => {
     let ans = parseInt(Panswer);
     console.log("grading");
     if (ans === answer) {
@@ -48,9 +68,18 @@ export default function TestGame() {
       setScore(score + 1);
     } else {
       setGrade("WRONG");
+      if (authUser) {
+        createScore(authUser.email);
+      } else {
+        createScore("guest");
+      }
       setGameOver(true);
     }
-  }
+  };
+
+  const createScore = async (username) => {
+    await dispatch(UploadScore({ user: username, game: "Math", score: score }));
+  };
 
   return (
     <div>
@@ -83,6 +112,7 @@ export default function TestGame() {
             >
               Submit
             </button>
+            <button onClick={createScore}>Test</button>
             <>{grade}</>
           </div>
           <div className="redline"></div>

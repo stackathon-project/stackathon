@@ -23,6 +23,7 @@ export default function Auth() {
       .then(() => console.log("signedout"))
       .catch((error) => console.log(error));
   };
+
   return (
     <div>
       {authUser ? (
