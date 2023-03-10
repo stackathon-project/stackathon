@@ -19527,13 +19527,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _Michelle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Michelle */ "./src/Michelle.js");
 /* harmony import */ var _components_Landing_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Landing/Home */ "./src/components/Landing/Home.js");
 /* harmony import */ var _components_GameRoutes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/GameRoutes */ "./src/components/GameRoutes/index.js");
 /* harmony import */ var _components_Auth_SignIn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Auth/SignIn */ "./src/components/Auth/SignIn.js");
 /* harmony import */ var _components_Auth_SignUp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Auth/SignUp */ "./src/components/Auth/SignUp.js");
 /* harmony import */ var _components_TestPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/TestPage */ "./src/components/TestPage.js");
+/* harmony import */ var _components_TestGame__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/TestGame */ "./src/components/TestGame.js");
+
 
 
 
@@ -19543,24 +19545,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Routing() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Routes, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/michelle",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Michelle__WEBPACK_IMPORTED_MODULE_1__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Landing_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/gameroutes",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_GameRoutes__WEBPACK_IMPORTED_MODULE_3__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/signin",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Auth_SignIn__WEBPACK_IMPORTED_MODULE_4__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/signup",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Auth_SignUp__WEBPACK_IMPORTED_MODULE_5__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
     path: "/testing",
     element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TestPage__WEBPACK_IMPORTED_MODULE_6__["default"], null)
+  }, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
+    path: "/testing/game",
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TestGame__WEBPACK_IMPORTED_MODULE_7__["default"], null)
   }, " "));
 }
 
@@ -20322,6 +20327,89 @@ function Title() {
   }, "o"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "home-title-letters"
   }, "n"));
+}
+
+/***/ }),
+
+/***/ "./src/components/TestGame.js":
+/*!************************************!*\
+  !*** ./src/components/TestGame.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ TestGame)
+/* harmony export */ });
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs */ "./node_modules/animejs/lib/anime.es.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function TestGame() {
+  const [score, setScore] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
+  const [question, setQuestion] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
+  const [Panswer, setPAnswer] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
+  const [answer, setAnswer] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
+  const [grade, setGrade] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("starting");
+  const [gameOver, setGameOver] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  function startGame() {
+    setGameOver(false);
+    generateMathQuestion();
+  }
+  function generateMathQuestion() {
+    const operatorsKeys = ["+", "-", "*", "^"];
+    let number1 = getRandomInt(200);
+    let number2 = getRandomInt(200);
+    let randomExpression = operatorsKeys[getRandomInt(3)];
+    if (randomExpression === "+") {
+      let a = number1 + number2;
+      setAnswer(a);
+    } else if (randomExpression === "-") {
+      let a = number1 - number2;
+      setAnswer(a);
+    } else if (randomExpression === "*") {
+      let a = number1 * number2;
+      setAnswer(a);
+    } else if (randomExpression === "^") {
+      let a = number1 ^ number2;
+      setAnswer(a);
+    }
+    setQuestion(`${number1} ${randomExpression} ${number2}`);
+  }
+  function checkAnswer() {
+    let ans = parseInt(Panswer);
+    console.log("grading");
+    if (ans === answer) {
+      setGrade("CORRECT");
+      setScore(score + 1);
+    } else {
+      setGrade("WRONG");
+      setGameOver(true);
+    }
+  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", {
+    onClick: () => {
+      startGame();
+    }
+  }, "Start game"), !gameOver ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h4", null, "Your total points: ", score), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    id: "gameover"
+  }, question, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("input", {
+    placeholder: "answer",
+    name: "answer",
+    value: Panswer,
+    onChange: e => setPAnswer(e.target.value)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", {
+    onClick: () => {
+      checkAnswer();
+      generateMathQuestion();
+    }
+  }, "Submit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, grade)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "redline"
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", null, "Gameover"));
 }
 
 /***/ }),
