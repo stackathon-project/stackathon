@@ -5,7 +5,7 @@ export default function Pacman(props) {
 
     return (
         <>
-            <div id="pacman">
+            <div id="pacmanscreen">
                 this is where pacman would go
             </div>
         </>

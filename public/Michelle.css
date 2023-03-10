@@ -144,6 +144,7 @@ body {
     font-family: 'PT Sans';
 }
 
+
 /* CONTROLLERS */
 
 .gb-up {
@@ -322,4 +323,41 @@ section img {
     border-radius: 50px;
     font-size: 1.4em;
     color: rgb(89, 95, 127)
+}
+
+/* Game Screen! */
+#pacmanscreen {
+    background-color: white;
+    height: 8rem;
+    margin: 2rem 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 160px;
+}
+
+#gamescreen {
+    background-color: white;
+    height: 8rem;
+    margin: 2rem 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 160px;
+}
+
+#snakescreen {
+    background-color: white;
+    height: 8rem;
+    margin: 2rem 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 160px;
 }

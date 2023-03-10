@@ -5,7 +5,7 @@ export default function Game(props) {
 
     return (
         <>
-            <div id="game">
+            <div id="gamescreen">
                 this is where the third game would go
             </div>
         </>

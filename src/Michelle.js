@@ -44,12 +44,6 @@ export default function Michelle() {
   // const [game, setGame] = useState(null) null, hovered, or selected
 
   const handleMenuDown = () => {
-    // if (document.getElementById("arcade") === null) {
-    //   return <div> loading </div>
-    // } else {
-    //   document.getElementById("arcade").style.backgroundColor = "grey";
-    // }
-
     if (hovered !== lastGame) {
       setHovered(hovered + 1);
       document.getElementById(list[hovered]).style.backgroundColor = "grey";
@@ -61,23 +55,24 @@ export default function Michelle() {
   console.log("what is hovered right now,", hovered)
 
   const handleMenuUp = () => {
-    if (!game) {
-      if (selected > 0) {
-        setHovered(hovered - 1);
-        document.getElementById(list[hovered]).style.backgroundColor = "grey";
-      } else {
-        setHovered(lastGame)
-      }
+    if (selected > 0) {
+      setHovered(hovered - 1);
+      document.getElementById(list[hovered]).style.backgroundColor = "grey";
     } else {
-      // console.log('game settings be functional here')
+      setHovered(lastGame)
     }
+
   }
 
-  //if selected game is null, you can render the normal page. else, set selected to a number and render accordingly?
   const handleSubmit = () => {
-    console.log("selected game is:", hovered);
-    setGame(hovered);
+    setSelected(hovered);
   }
+
+  const handleBClick = () => {
+    setSelected(null);
+    setHovered(0);
+  }
+
 
   return (
     <div>
@@ -90,7 +85,7 @@ export default function Michelle() {
               <div className="gameboy-b-contBUTTON" onClick={homeClick}> </div>
               {!on ?
                 <div id="gameboyscreenoff"></div>
-                : <SelectionScreen hovered={hovered} />
+                : <SelectionScreen selected={selected} list={list} />
               }
               <div className="gameboy-screen-curve"></div>
             </div>
@@ -105,7 +100,7 @@ export default function Michelle() {
                 <div className="gb-btn-A" >
                   <p className="gb-letter">A</p>
                 </div>
-                <div className="gb-btn-B">
+                <div className="gb-btn-B" onClick={handleBClick}>
                   <p className="gb-letter">B</p>
                 </div>
                 <div className="gb-btn-content">

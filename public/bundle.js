@@ -8064,7 +8064,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _components_Screen_SelectionScreen__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Screen/SelectionScreen */ "./src/components/Screen/SelectionScreen.js");
 /* harmony import */ var _components_Game_Snake__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Game/Snake */ "./src/components/Game/Snake.js");
-/* harmony import */ var _components_Game_Snake__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_Game_Snake__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -8105,12 +8104,6 @@ function Michelle() {
   // const [game, setGame] = useState(null) null, hovered, or selected
 
   const handleMenuDown = () => {
-    // if (document.getElementById("arcade") === null) {
-    //   return <div> loading </div>
-    // } else {
-    //   document.getElementById("arcade").style.backgroundColor = "grey";
-    // }
-
     if (hovered !== lastGame) {
       setHovered(hovered + 1);
       document.getElementById(list[hovered]).style.backgroundColor = "grey";
@@ -8120,22 +8113,19 @@ function Michelle() {
   };
   console.log("what is hovered right now,", hovered);
   const handleMenuUp = () => {
-    if (!game) {
-      if (selected > 0) {
-        setHovered(hovered - 1);
-        document.getElementById(list[hovered]).style.backgroundColor = "grey";
-      } else {
-        setHovered(lastGame);
-      }
+    if (selected > 0) {
+      setHovered(hovered - 1);
+      document.getElementById(list[hovered]).style.backgroundColor = "grey";
     } else {
-      // console.log('game settings be functional here')
+      setHovered(lastGame);
     }
   };
-
-  //if selected game is null, you can render the normal page. else, set selected to a number and render accordingly?
   const handleSubmit = () => {
-    console.log("selected game is:", hovered);
-    setGame(hovered);
+    setSelected(hovered);
+  };
+  const handleBClick = () => {
+    setSelected(null);
+    setHovered(0);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "gameboy-container"
@@ -8157,7 +8147,8 @@ function Michelle() {
   }, " "), !on ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "gameboyscreenoff"
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Screen_SelectionScreen__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    hovered: hovered
+    selected: selected,
+    list: list
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "gameboy-screen-curve"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -8181,7 +8172,8 @@ function Michelle() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "gb-letter"
   }, "A")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "gb-btn-B"
+    className: "gb-btn-B",
+    onClick: handleBClick
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "gb-letter"
   }, "B")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -8530,294 +8522,69 @@ function Yao() {
 
 /***/ }),
 
+/***/ "./src/components/Game/Game.js":
+/*!*************************************!*\
+  !*** ./src/components/Game/Game.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Game)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Game(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "gamescreen"
+  }, "this is where the third game would go"));
+}
+
+/***/ }),
+
+/***/ "./src/components/Game/Pacman.js":
+/*!***************************************!*\
+  !*** ./src/components/Game/Pacman.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Pacman)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Pacman(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "pacmanscreen"
+  }, "this is where pacman would go"));
+}
+
+/***/ }),
+
 /***/ "./src/components/Game/Snake.js":
 /*!**************************************!*\
   !*** ./src/components/Game/Snake.js ***!
   \**************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// // import React from "react";
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Snake)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-// // export default function Snake(props) {
-
-// //     return (
-// //         <>
-// //             <div id="gameboyscreenon">
-// //                 <div className="arcade-title"> Arcade Games: </div>
-// //                 <div id="snake">
-// //                     THIS IS WHERE THE SNAKE CODE GOES LOL
-// //                 </div>
-// //             </div>
-// //         </>
-// //     )
-// // }
-
-// import React from "react";
-
-// export default function Snake(props) {
-//     /*****
-//      * deliverables:
-//      * snake game ends when
-//      * 1 snake touches itself
-//      * 2 snake touches outside border
-//      * when the game ends, the gameplay should stop and the user should be notified that the game is over
-//      * the snake should grow one length when it eats the apple
-//      * the new apple should appear randomly on the screen after the previous one has been eaten
-//      * the snake should be controlled by the arrow keys on the keyboard
-//      * the game will show a score of how many apples have been eaten
-//      */
-//     var gameCanvas = document.getElementById("myCanvas");
-//     let ctx = myCanvas.getContext("2d");
-//     //apple size
-//     var appleWidth = 10;
-//     var appleHeight = 10;
-
-//     const DIRECTION = {
-//         NORTH: 'NORTH',
-//         SOUTH: 'SOUTH',
-//         EAST: 'EAST',
-//         WEST: 'WEST'
-//     };
-
-//     var snake;
-//     var snakeDirection;
-//     var score;
-//     var appleLocation;
-//     var gameOver;
-
-//     var dx = 10;
-//     var dy = 10;
-
-//     var lives = 3;
-
-//     ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
-//     ctx.strokeRect(0, 0, myCanvas.width, myCanvas.height);
-
-//     document.addEventListener("keydown", keyDownHandler, false);
-//     document.addEventListener('mousedown', handleMouseClick);
-
-//     function startGame() {
-//         snake = [{
-//             x: 150,
-//             y: 150
-//         },
-//         {
-//             x: 140,
-//             y: 150
-//         },
-//         {
-//             x: 130,
-//             y: 150
-//         },
-//         {
-//             x: 120,
-//             y: 150
-//         },
-//         {
-//             x: 110,
-//             y: 150
-//         },
-//         {
-//             x: 100,
-//             y: 150
-//         },
-//         {
-//             x: 90,
-//             y: 150
-//         },
-//         {
-//             x: 80,
-//             y: 150
-//         },
-//         {
-//             x: 70,
-//             y: 60
-//         },
-//         {
-//             x: 50,
-//             y: 150
-//         }
-//         ];
-
-//         snakeDirection = DIRECTION.EAST;
-//         appleLocation = {
-//             x: 250,
-//             y: 150
-//         };
-//         score = 0;
-
-//         gameInterval = setInterval(Draw, 100);
-//     }
-
-//     function Draw() {
-//         ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
-
-//         drawApple();
-//         moveSnake();
-//         drawSnake();
-//         collision();
-//         eatApple();
-//         drawScore();
-//     }
-
-//     function keyDownHandler(e) {
-//         if (e.key == "Right" || e.key == "ArrowRight") {
-//             snakeDirection = DIRECTION.EAST;
-//         } else if (e.key == "Left" || e.key == "ArrowLeft") {
-//             snakeDirection = DIRECTION.WEST;
-//         } else if (e.key == "Up" || e.key == "ArrowUp") {
-//             snakeDirection = DIRECTION.NORTH;
-//         } else if (e.key == "Down" || e.key == "ArrowDown") {
-//             snakeDirection = DIRECTION.SOUTH;
-//         }
-//     }
-
-//     function drawApple() {
-//         ctx.fillStyle = 'red';
-//         ctx.strokestyle = 'darkred';
-//         ctx.fillRect(appleLocation.x, appleLocation.y, appleWidth, appleHeight);
-//         ctx.strokeRect(appleLocation.x, appleLocation.y, appleWidth, appleHeight)
-//     }
-
-//     function drawSnake() {
-//         snake.forEach(drawSnakePart)
-//     }
-
-//     function drawSnakePart(snake) {
-//         ctx.fillStyle = 'lightgreen';
-//         ctx.strokestyle = 'darkgreen';
-//         ctx.fillRect(snake.x, snake.y, 10, 10);
-//         ctx.strokeRect(snake.x, snake.y, 10, 10);
-//     }
-
-//     function moveSnake() {
-//         //create copy of snake
-//         var snakeCopy = [];
-
-//         //loop through snake 
-//         for (var i = 0; i < snake.length; i++) {
-//             //for each iteration, add snake body to snake copy
-//             snakeCopy.push({
-//                 x: snake[i].x,
-//                 y: snake[i].y
-//             });
-//         }
-//         for (var i = 0; i < snake.length; i++) {
-
-//             if (i === 0) {
-//                 if (snakeDirection === DIRECTION.EAST) {
-//                     snake[i].x += dx;
-//                 }
-//                 if (snakeDirection === DIRECTION.WEST) {
-//                     snake[i].x -= dx;
-//                 }
-//                 if (snakeDirection === DIRECTION.NORTH) {
-//                     snake[i].y -= dy;
-//                 }
-//                 if (snakeDirection === DIRECTION.SOUTH) {
-//                     snake[i].y += dy;
-//                 }
-//             } else {
-//                 snake[i].x = snakeCopy[i - 1].x;
-//                 snake[i].y = snakeCopy[i - 1].y;
-//             }
-//         }
-//     }
-
-//     function collision() {
-//         var headX = snake[0].x;
-//         var headY = snake[0].y;
-
-//         if (headX >= myCanvas.width || headY >= myCanvas.height || headY <= myCanvas.height - 610 || headX <= myCanvas.width - 610) {
-//             ctx.fillText("GAME OVER. You hit the wall. Poor snaky.", 120, 300);
-//             stopGame(gameInterval);//stop the game
-//             gameOver = true;
-//         } else {
-//             snakeBodyCollision();
-//         }
-
-//     }
-
-//     function snakeBodyCollision() {
-//         for (var i = 1; i < snake.length; i++)
-//             if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-//                 ctx.fillText("Oh, boy. You just bit yourself. GAME OVER.", 120, 300);
-//                 stopGame(gameInterval);//stop the game
-//                 gameOver = true;
-//             }
-//     }
-
-//     function eatApple() {
-//         if (snake[0].x == appleLocation.x && snake[0].y == appleLocation.y) {
-
-//             appleLocation.x = Math.floor(Math.random() * 50) * 10;
-//             appleLocation.y = Math.floor(Math.random() * 50) * 10;
-
-//             var snakeTail = snake[snake.length - 1];
-
-//             snake.push({
-//                 x: snakeTail.x,
-//                 y: snakeTail.y
-//             });
-//             score++;
-//         }
-//     }
-
-//     function drawScore() {
-//         ctx.font = "16px Arial";
-//         ctx.fillstyle = "#0095DD";
-//         ctx.fillText("Score: " + score, 8, 20);
-//     }
-
-//     function handleMouseClick(evt) {
-//         if (gameOver) {
-//             startGame();
-
-//             //document.location.reload();
-
-//         }
-//     }
-
-//     function stopGame(interval) {
-//         clearInterval(gameInterval); // Needed for Chrome to end game
-//     }
-
-//     var gameInterval;
-
-//     startGame();
-
-//     return (
-//         <>
-//             <html>
-//                 <head>
-//                     <meta charset="utf-8" />
-//                     <title>Snake Game</title>
-//                     <style>
-//                         * {padding: 0; margin: 0; }
-//                         canvas {background:	#000000;
-//                         display: block;
-//                         margin: 0 auto;
-//                         border-color:  #A9A9A9;
-//                         border-style: dashed;
-//                         border-width: 8px;
-//                         margin-top: 80px;
-// }
-//                     </style>
-//                 </head>
-//                 <body>
-
-//                     <canvas id="myCanvas" width="600" height="600"></canvas>
-
-//                     <script src="snake.js">
-
-//                     </script>
-
-//                 </body>
-//             </html>
-
-//         </>
-//     )
-// }
+function Snake(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "snakescreen"
+  }, "this is where snake would go"));
+}
 
 /***/ }),
 
@@ -9155,31 +8922,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/ListGroup.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/ListGroup.js");
+/* harmony import */ var _Game_Pacman__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Game/Pacman */ "./src/components/Game/Pacman.js");
+/* harmony import */ var _Game_Game__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Game/Game */ "./src/components/Game/Game.js");
+/* harmony import */ var _Game_Snake__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Game/Snake */ "./src/components/Game/Snake.js");
+
+
+
 
 
 
 function Screen(props) {
+  const [loadGame, setLoadGame] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)();
+  const gameList = {
+    1: "snake",
+    2: "pacman",
+    3: "game"
+  };
+  let selected = props.selected;
+  console.log("this was selected :", selected);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    setLoadGame(gameList[selected]);
+  }, [selected]);
   // const handleSelect = () => {
   //     console.log("im a game and ive been selected!!!!")
   // }
 
-  let hovered = props.hovered;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "gameboyscreenon"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "arcade"
-  }, " Arcade Games: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "babyscreen"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    className: "listoption"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
-    id: "snake"
-  }, "Snakes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
-    id: "pacman"
-  }, "Pacman"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
-    id: "game"
-  }, "Game")))));
+  console.log("this is loaded", loadGame);
+  if (!loadGame) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: "gameboyscreenon"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: "arcade"
+    }, " Arcade Games: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: "babyscreen"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      className: "listoption"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"].Item, {
+      id: "snake"
+    }, "Snakes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"].Item, {
+      id: "pacman"
+    }, "Pacman"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"].Item, {
+      id: "game"
+    }, "Game")))));
+  } else if (loadGame === "snake") {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Game_Snake__WEBPACK_IMPORTED_MODULE_3__["default"], null);
+  } else if (loadGame === "pacman") {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Game_Pacman__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+  } else if (loadGame === "game") {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Game_Game__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+  }
 }
 
 /***/ }),
@@ -9293,7 +9085,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html {\n    font-size: var(--size);\n}\n\nbody {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    font-family: 'PT Sans';\n    justify-content: center;\n}\n\n.gameboy-body {\n    background: rgb(192, 203, 255);\n    border-radius: 1rem 1rem 0 0;\n    display: flex;\n    height: 26rem;\n    justify-content: center;\n    width: 18rem;\n    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);\n}\n\n.gameboy-footer {\n    color: white;\n    margin-top: 6rem;\n    font-family: 'Press Start 2P';\n}\n\n.gameboy-center-main {\n    height: 11rem;\n    width: 11rem;\n    position: absolute;\n    top: 15rem;\n    border-radius: 0 0 1rem 1rem;\n}\n\n.gameboy-center-brand {\n    text-align: center;\n    border: 1px solid #9ebbee;\n    border-radius: 5rem;\n    width: 60%;\n    margin: 1rem auto 0 auto;\n    font-family: 'PT Sans';\n    color: #7c91be;\n}\n\n.gameboy-curve {\n    background: rgb(192, 203, 255);\n    height: 4rem;\n    position: absolute;\n    top: 26rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 18rem;\n    border-radius: 0 0 50% 50% / 50px;\n    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)\n}\n\n.gameboy-b-contBUTTON {\n    content: '';\n    display: inline-block;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    background: rgb(138, 6, 6);\n    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);\n    position: absolute;\n    top: 5rem;\n    margin-left: 1rem;\n}\n\n.gameboy-b-cont:after {\n    content: 'HOME';\n    position: absolute;\n    top: 6rem;\n    color: white;\n    font-size: .4rem;\n    margin-left: .9rem;\n    margin-top: .2rem;\n    font-family: 'PT Sans';\n}\n\n.gameboy-b-cont {\n    background-color: #3f515a;\n    border-radius: .5rem;\n    width: 132px;\n    height: 11rem;\n    margin: 1rem;\n    width: 100%;\n}\n\n#gameboyscreenoff {\n    background-color: black;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#gameboyscreenon {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#babyscreen {\n    display: inline-block;\n    overflow: hidden;\n    max-width: 120px;\n    max-height: 96px;\n    word-wrap: break-word;\n    width: 100%;\n    height: 100%;\n}\n\n.gameboy-screen-curve {\n    background: #3f515a;\n    height: 4rem;\n    position: absolute;\n    top: 11.5rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 16rem;\n    border-radius: 0 0 70% 70% / 50px;\n}\n\n.gameboy-screen-curve::before {\n    content: 'GAME BOY COLOR';\n    color: white;\n    position: absolute;\n    top: 1.5rem;\n    left: 3.6rem;\n    font-style: italic;\n    font-family: 'PT Sans';\n}\n\n/* CONTROLLERS */\n\n.gb-up {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 2rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-down {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 4rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-left {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n.gb-right {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    right: 9rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n\n/* BUTTONS */\n\n.gb-btn-A {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 2rem;\n    right: -2rem;\n}\n\n.gb-btn-B {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 4rem;\n    right: 0rem;\n}\n\n.gb-letter {\n    margin: .5rem;\n    text-align: center;\n    color: #9E9E9E;\n}\n\n.gb-btn-content {\n    position: relative;\n    margin-top: 3rem;\n    margin: 4rem 2rem;\n    font-size: .7rem;\n}\n\n.gb-btn-center {\n    display: flex;\n    justify-content: space-around;\n    color: #7c91be;\n}\n\n.gb-btn-on {\n    width: 3rem;\n    height: 1rem;\n    background-color: #3f515a;\n    border-radius: 2rem;\n}\n\n.gameboy-center-dotted {\n    position: absolute;\n    top: 7rem;\n    left: 10rem;\n}\n\n.gb-dotted {\n    width: 3rem;\n    border-bottom: 4px dotted #3f515a;\n    transform: rotate(150deg);\n    height: .4rem;\n}\n\n#arcade {\n    color: green;\n    word-wrap: break-word;\n    background-color: white;\n}\n\n\n#snake {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#pacman {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#game {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n/* controller box */\n.controller {\n    border-radius: 50%;\n    border: 10px solid green;\n    margin: 120px;\n    width: 100%\n}\n\n/* background img*/\nsection {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-height: 100vh;\n    min-width: 100vh;\n    width: 100%;\n    height: 100%;\n    background-image: url('https://68.media.tumblr.com/31c2caf17cb6f18ad912bfc44d9ecde6/tumblr_o71mvufacw1uaundno1_1280.gif');\n    background-repeat: no-repeat;\n    background-size: contain;\n}\n\nsection img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100;\n    background-size: cover;\n}\n\n#text {\n    position: absolute;\n    color: #7c91be;\n    font-size: 8vw;\n    font-weight: 200;\n}\n\n#playbutton {\n    position: absolute;\n    top: 70%;\n    left: 50%;\n    transform: translate(-70%, -70%);\n    text-decoration: none;\n    display: inline-block;\n    padding: 8px 50px;\n    background-color: white;\n    border-radius: 50px;\n    font-size: 1.4em;\n    color: rgb(89, 95, 127)\n}", "",{"version":3,"sources":["webpack://./public/Michelle.css"],"names":[],"mappings":"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","sourcesContent":["html {\n    font-size: var(--size);\n}\n\nbody {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    font-family: 'PT Sans';\n    justify-content: center;\n}\n\n.gameboy-body {\n    background: rgb(192, 203, 255);\n    border-radius: 1rem 1rem 0 0;\n    display: flex;\n    height: 26rem;\n    justify-content: center;\n    width: 18rem;\n    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);\n}\n\n.gameboy-footer {\n    color: white;\n    margin-top: 6rem;\n    font-family: 'Press Start 2P';\n}\n\n.gameboy-center-main {\n    height: 11rem;\n    width: 11rem;\n    position: absolute;\n    top: 15rem;\n    border-radius: 0 0 1rem 1rem;\n}\n\n.gameboy-center-brand {\n    text-align: center;\n    border: 1px solid #9ebbee;\n    border-radius: 5rem;\n    width: 60%;\n    margin: 1rem auto 0 auto;\n    font-family: 'PT Sans';\n    color: #7c91be;\n}\n\n.gameboy-curve {\n    background: rgb(192, 203, 255);\n    height: 4rem;\n    position: absolute;\n    top: 26rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 18rem;\n    border-radius: 0 0 50% 50% / 50px;\n    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)\n}\n\n.gameboy-b-contBUTTON {\n    content: '';\n    display: inline-block;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    background: rgb(138, 6, 6);\n    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);\n    position: absolute;\n    top: 5rem;\n    margin-left: 1rem;\n}\n\n.gameboy-b-cont:after {\n    content: 'HOME';\n    position: absolute;\n    top: 6rem;\n    color: white;\n    font-size: .4rem;\n    margin-left: .9rem;\n    margin-top: .2rem;\n    font-family: 'PT Sans';\n}\n\n.gameboy-b-cont {\n    background-color: #3f515a;\n    border-radius: .5rem;\n    width: 132px;\n    height: 11rem;\n    margin: 1rem;\n    width: 100%;\n}\n\n#gameboyscreenoff {\n    background-color: black;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#gameboyscreenon {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#babyscreen {\n    display: inline-block;\n    overflow: hidden;\n    max-width: 120px;\n    max-height: 96px;\n    word-wrap: break-word;\n    width: 100%;\n    height: 100%;\n}\n\n.gameboy-screen-curve {\n    background: #3f515a;\n    height: 4rem;\n    position: absolute;\n    top: 11.5rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 16rem;\n    border-radius: 0 0 70% 70% / 50px;\n}\n\n.gameboy-screen-curve::before {\n    content: 'GAME BOY COLOR';\n    color: white;\n    position: absolute;\n    top: 1.5rem;\n    left: 3.6rem;\n    font-style: italic;\n    font-family: 'PT Sans';\n}\n\n/* CONTROLLERS */\n\n.gb-up {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 2rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-down {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 4rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-left {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n.gb-right {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    right: 9rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n\n/* BUTTONS */\n\n.gb-btn-A {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 2rem;\n    right: -2rem;\n}\n\n.gb-btn-B {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 4rem;\n    right: 0rem;\n}\n\n.gb-letter {\n    margin: .5rem;\n    text-align: center;\n    color: #9E9E9E;\n}\n\n.gb-btn-content {\n    position: relative;\n    margin-top: 3rem;\n    margin: 4rem 2rem;\n    font-size: .7rem;\n}\n\n.gb-btn-center {\n    display: flex;\n    justify-content: space-around;\n    color: #7c91be;\n}\n\n.gb-btn-on {\n    width: 3rem;\n    height: 1rem;\n    background-color: #3f515a;\n    border-radius: 2rem;\n}\n\n.gameboy-center-dotted {\n    position: absolute;\n    top: 7rem;\n    left: 10rem;\n}\n\n.gb-dotted {\n    width: 3rem;\n    border-bottom: 4px dotted #3f515a;\n    transform: rotate(150deg);\n    height: .4rem;\n}\n\n#arcade {\n    color: green;\n    word-wrap: break-word;\n    background-color: white;\n}\n\n\n#snake {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#pacman {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#game {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n/* controller box */\n.controller {\n    border-radius: 50%;\n    border: 10px solid green;\n    margin: 120px;\n    width: 100%\n}\n\n/* background img*/\nsection {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-height: 100vh;\n    min-width: 100vh;\n    width: 100%;\n    height: 100%;\n    background-image: url('https://68.media.tumblr.com/31c2caf17cb6f18ad912bfc44d9ecde6/tumblr_o71mvufacw1uaundno1_1280.gif');\n    background-repeat: no-repeat;\n    background-size: contain;\n}\n\nsection img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100;\n    background-size: cover;\n}\n\n#text {\n    position: absolute;\n    color: #7c91be;\n    font-size: 8vw;\n    font-weight: 200;\n}\n\n#playbutton {\n    position: absolute;\n    top: 70%;\n    left: 50%;\n    transform: translate(-70%, -70%);\n    text-decoration: none;\n    display: inline-block;\n    padding: 8px 50px;\n    background-color: white;\n    border-radius: 50px;\n    font-size: 1.4em;\n    color: rgb(89, 95, 127)\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html {\n    font-size: var(--size);\n}\n\nbody {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    font-family: 'PT Sans';\n    justify-content: center;\n}\n\n.gameboy-body {\n    background: rgb(192, 203, 255);\n    border-radius: 1rem 1rem 0 0;\n    display: flex;\n    height: 26rem;\n    justify-content: center;\n    width: 18rem;\n    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);\n}\n\n.gameboy-footer {\n    color: white;\n    margin-top: 6rem;\n    font-family: 'Press Start 2P';\n}\n\n.gameboy-center-main {\n    height: 11rem;\n    width: 11rem;\n    position: absolute;\n    top: 15rem;\n    border-radius: 0 0 1rem 1rem;\n}\n\n.gameboy-center-brand {\n    text-align: center;\n    border: 1px solid #9ebbee;\n    border-radius: 5rem;\n    width: 60%;\n    margin: 1rem auto 0 auto;\n    font-family: 'PT Sans';\n    color: #7c91be;\n}\n\n.gameboy-curve {\n    background: rgb(192, 203, 255);\n    height: 4rem;\n    position: absolute;\n    top: 26rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 18rem;\n    border-radius: 0 0 50% 50% / 50px;\n    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)\n}\n\n.gameboy-b-contBUTTON {\n    content: '';\n    display: inline-block;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    background: rgb(138, 6, 6);\n    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);\n    position: absolute;\n    top: 5rem;\n    margin-left: 1rem;\n}\n\n.gameboy-b-cont:after {\n    content: 'HOME';\n    position: absolute;\n    top: 6rem;\n    color: white;\n    font-size: .4rem;\n    margin-left: .9rem;\n    margin-top: .2rem;\n    font-family: 'PT Sans';\n}\n\n.gameboy-b-cont {\n    background-color: #3f515a;\n    border-radius: .5rem;\n    width: 132px;\n    height: 11rem;\n    margin: 1rem;\n    width: 100%;\n}\n\n#gameboyscreenoff {\n    background-color: black;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#gameboyscreenon {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#babyscreen {\n    display: inline-block;\n    overflow: hidden;\n    max-width: 120px;\n    max-height: 96px;\n    word-wrap: break-word;\n    width: 100%;\n    height: 100%;\n}\n\n.gameboy-screen-curve {\n    background: #3f515a;\n    height: 4rem;\n    position: absolute;\n    top: 11.5rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 16rem;\n    border-radius: 0 0 70% 70% / 50px;\n}\n\n.gameboy-screen-curve::before {\n    content: 'GAME BOY COLOR';\n    color: white;\n    position: absolute;\n    top: 1.5rem;\n    left: 3.6rem;\n    font-style: italic;\n    font-family: 'PT Sans';\n}\n\n\n/* CONTROLLERS */\n\n.gb-up {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 2rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-down {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 4rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-left {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n.gb-right {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    right: 9rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n\n/* BUTTONS */\n\n.gb-btn-A {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 2rem;\n    right: -2rem;\n}\n\n.gb-btn-B {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 4rem;\n    right: 0rem;\n}\n\n.gb-letter {\n    margin: .5rem;\n    text-align: center;\n    color: #9E9E9E;\n}\n\n.gb-btn-content {\n    position: relative;\n    margin-top: 3rem;\n    margin: 4rem 2rem;\n    font-size: .7rem;\n}\n\n.gb-btn-center {\n    display: flex;\n    justify-content: space-around;\n    color: #7c91be;\n}\n\n.gb-btn-on {\n    width: 3rem;\n    height: 1rem;\n    background-color: #3f515a;\n    border-radius: 2rem;\n}\n\n.gameboy-center-dotted {\n    position: absolute;\n    top: 7rem;\n    left: 10rem;\n}\n\n.gb-dotted {\n    width: 3rem;\n    border-bottom: 4px dotted #3f515a;\n    transform: rotate(150deg);\n    height: .4rem;\n}\n\n#arcade {\n    color: green;\n    word-wrap: break-word;\n    background-color: white;\n}\n\n\n#snake {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#pacman {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#game {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n/* controller box */\n.controller {\n    border-radius: 50%;\n    border: 10px solid green;\n    margin: 120px;\n    width: 100%\n}\n\n/* background img*/\nsection {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-height: 100vh;\n    min-width: 100vh;\n    width: 100%;\n    height: 100%;\n    background-image: url('https://68.media.tumblr.com/31c2caf17cb6f18ad912bfc44d9ecde6/tumblr_o71mvufacw1uaundno1_1280.gif');\n    background-repeat: no-repeat;\n    background-size: contain;\n}\n\nsection img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100;\n    background-size: cover;\n}\n\n#text {\n    position: absolute;\n    color: #7c91be;\n    font-size: 8vw;\n    font-weight: 200;\n}\n\n#playbutton {\n    position: absolute;\n    top: 70%;\n    left: 50%;\n    transform: translate(-70%, -70%);\n    text-decoration: none;\n    display: inline-block;\n    padding: 8px 50px;\n    background-color: white;\n    border-radius: 50px;\n    font-size: 1.4em;\n    color: rgb(89, 95, 127)\n}\n\n/* Game Screen! */\n#pacmanscreen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#gamescreen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#snakescreen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}", "",{"version":3,"sources":["webpack://./public/Michelle.css"],"names":[],"mappings":"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","sourcesContent":["html {\n    font-size: var(--size);\n}\n\nbody {\n    align-items: center;\n    display: flex;\n    flex-direction: column;\n    font-family: 'PT Sans';\n    justify-content: center;\n}\n\n.gameboy-body {\n    background: rgb(192, 203, 255);\n    border-radius: 1rem 1rem 0 0;\n    display: flex;\n    height: 26rem;\n    justify-content: center;\n    width: 18rem;\n    box-shadow: 0px 0px 5px 0px rgba(173, 173, 173, 1);\n}\n\n.gameboy-footer {\n    color: white;\n    margin-top: 6rem;\n    font-family: 'Press Start 2P';\n}\n\n.gameboy-center-main {\n    height: 11rem;\n    width: 11rem;\n    position: absolute;\n    top: 15rem;\n    border-radius: 0 0 1rem 1rem;\n}\n\n.gameboy-center-brand {\n    text-align: center;\n    border: 1px solid #9ebbee;\n    border-radius: 5rem;\n    width: 60%;\n    margin: 1rem auto 0 auto;\n    font-family: 'PT Sans';\n    color: #7c91be;\n}\n\n.gameboy-curve {\n    background: rgb(192, 203, 255);\n    height: 4rem;\n    position: absolute;\n    top: 26rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 18rem;\n    border-radius: 0 0 50% 50% / 50px;\n    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75)\n}\n\n.gameboy-b-contBUTTON {\n    content: '';\n    display: inline-block;\n    width: 1rem;\n    height: 1rem;\n    border-radius: 1rem;\n    background: rgb(138, 6, 6);\n    background: radial-gradient(circle, rgba(138, 6, 6, 1) 0%, rgba(238, 32, 10, 1) 100%);\n    position: absolute;\n    top: 5rem;\n    margin-left: 1rem;\n}\n\n.gameboy-b-cont:after {\n    content: 'HOME';\n    position: absolute;\n    top: 6rem;\n    color: white;\n    font-size: .4rem;\n    margin-left: .9rem;\n    margin-top: .2rem;\n    font-family: 'PT Sans';\n}\n\n.gameboy-b-cont {\n    background-color: #3f515a;\n    border-radius: .5rem;\n    width: 132px;\n    height: 11rem;\n    margin: 1rem;\n    width: 100%;\n}\n\n#gameboyscreenoff {\n    background-color: black;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#gameboyscreenon {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#babyscreen {\n    display: inline-block;\n    overflow: hidden;\n    max-width: 120px;\n    max-height: 96px;\n    word-wrap: break-word;\n    width: 100%;\n    height: 100%;\n}\n\n.gameboy-screen-curve {\n    background: #3f515a;\n    height: 4rem;\n    position: absolute;\n    top: 11.5rem;\n    bottom: 2rem;\n    z-index: 4;\n    width: 16rem;\n    border-radius: 0 0 70% 70% / 50px;\n}\n\n.gameboy-screen-curve::before {\n    content: 'GAME BOY COLOR';\n    color: white;\n    position: absolute;\n    top: 1.5rem;\n    left: 3.6rem;\n    font-style: italic;\n    font-family: 'PT Sans';\n}\n\n\n/* CONTROLLERS */\n\n.gb-up {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 2rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-down {\n    position: absolute;\n    width: 1.5rem;\n    height: 2rem;\n    top: 4rem;\n    right: 10.3rem;\n    background-color: #3f515a;\n    border-radius: .3rem;\n}\n\n.gb-left {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    left: -2rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n.gb-right {\n    position: absolute;\n    width: 2rem;\n    height: 1.5rem;\n    top: 3.2rem;\n    right: 9rem;\n    background-color: #3f515a;\n    border-radius: 0.3rem;\n}\n\n\n/* BUTTONS */\n\n.gb-btn-A {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 2rem;\n    right: -2rem;\n}\n\n.gb-btn-B {\n    position: absolute;\n    height: 2rem;\n    width: 2rem;\n    border-radius: 50%;\n    background-color: #3f515a;\n    top: 4rem;\n    right: 0rem;\n}\n\n.gb-letter {\n    margin: .5rem;\n    text-align: center;\n    color: #9E9E9E;\n}\n\n.gb-btn-content {\n    position: relative;\n    margin-top: 3rem;\n    margin: 4rem 2rem;\n    font-size: .7rem;\n}\n\n.gb-btn-center {\n    display: flex;\n    justify-content: space-around;\n    color: #7c91be;\n}\n\n.gb-btn-on {\n    width: 3rem;\n    height: 1rem;\n    background-color: #3f515a;\n    border-radius: 2rem;\n}\n\n.gameboy-center-dotted {\n    position: absolute;\n    top: 7rem;\n    left: 10rem;\n}\n\n.gb-dotted {\n    width: 3rem;\n    border-bottom: 4px dotted #3f515a;\n    transform: rotate(150deg);\n    height: .4rem;\n}\n\n#arcade {\n    color: green;\n    word-wrap: break-word;\n    background-color: white;\n}\n\n\n#snake {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#pacman {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n#game {\n    color: rgb(138, 6, 6);\n    word-wrap: break-word;\n    background-color: white;\n}\n\n/* controller box */\n.controller {\n    border-radius: 50%;\n    border: 10px solid green;\n    margin: 120px;\n    width: 100%\n}\n\n/* background img*/\nsection {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-height: 100vh;\n    min-width: 100vh;\n    width: 100%;\n    height: 100%;\n    background-image: url('https://68.media.tumblr.com/31c2caf17cb6f18ad912bfc44d9ecde6/tumblr_o71mvufacw1uaundno1_1280.gif');\n    background-repeat: no-repeat;\n    background-size: contain;\n}\n\nsection img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100;\n    background-size: cover;\n}\n\n#text {\n    position: absolute;\n    color: #7c91be;\n    font-size: 8vw;\n    font-weight: 200;\n}\n\n#playbutton {\n    position: absolute;\n    top: 70%;\n    left: 50%;\n    transform: translate(-70%, -70%);\n    text-decoration: none;\n    display: inline-block;\n    padding: 8px 50px;\n    background-color: white;\n    border-radius: 50px;\n    font-size: 1.4em;\n    color: rgb(89, 95, 127)\n}\n\n/* Game Screen! */\n#pacmanscreen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#gamescreen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}\n\n#snakescreen {\n    background-color: white;\n    height: 8rem;\n    margin: 2rem 3rem;\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    word-wrap: break-word;\n    overflow: hidden;\n    width: 160px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
