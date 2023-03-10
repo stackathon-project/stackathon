@@ -1,0 +1,6 @@
+.home-title {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  font-family: "PT Sans";
+}

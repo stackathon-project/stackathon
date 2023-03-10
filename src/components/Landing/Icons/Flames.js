@@ -138,7 +138,7 @@ export default function Flames() {
           <div className="cf-flame"></div>
           <div className="cf-flame"></div>
         </div>
-        <Link to="/michelle">
+        <Link to="/aboutus">
           <div className="cf-log-container">
             <div className="cf-log"></div>
             <div className="cf-log"></div>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import "./Flames";
-import "./Gameboy.css";
+import "../Landing/Icons/Gameboy.css";
 import anime from "animejs/lib/anime.es.js";
 import { Link, Routes, Route } from "react-router-dom";
 
@@ -50,10 +49,11 @@ export default function Gameboy() {
     <div id="GameBoyIcon">
       <div className="icon-block">
         <div className="icon chick-icon" id="gameboy-icon-pic">
-          <Link to="/gameroutes">
+          <Link to="/games/ranking">
             {" "}
             <img
-              src="https://cdn-icons-png.flaticon.com/512/1135/1135231.png"
+              src="https://cdn-icons-png.flaticon.com/512/559/559771.png
+"
               width="150px"
               height="150px"
             ></img>
