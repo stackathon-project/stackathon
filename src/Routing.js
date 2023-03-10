@@ -5,6 +5,8 @@ import Home from "./components/Landing/Home";
 import GameRoutes from "./components/GameRoutes";
 import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
+import TestPage from "./components/TestPage";
+import TestGame from "./components/TestGame";
 
 export default function Routing() {
   return (
@@ -14,6 +16,12 @@ export default function Routing() {
       <Route path="/gameroutes" element={<GameRoutes />}></Route>
       <Route path="/signin" element={<SignIn />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
+      <Route path="/testing" element={<TestPage />}>
+        {" "}
+      </Route>
+      <Route path="/testing/game" element={<TestGame />}>
+        {" "}
+      </Route>
     </Routes>
   );
 }
