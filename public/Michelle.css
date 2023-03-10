@@ -83,17 +83,45 @@ body {
 .gameboy-b-cont {
     background-color: #3f515a;
     border-radius: .5rem;
+    width: 132px;
     height: 11rem;
     margin: 1rem;
     width: 100%;
 }
 
-.gameboy-screen {
+#gameboyscreenoff {
+    background-color: black;
+    height: 8rem;
+    margin: 2rem 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 160px;
+}
+
+#gameboyscreenon {
     background-color: white;
     height: 8rem;
     margin: 2rem 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 160px;
 }
 
+#babyscreen {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 120px;
+    max-height: 96px;
+    word-wrap: break-word;
+    width: 100%;
+    height: 100%;
+}
 
 .gameboy-screen-curve {
     background: #3f515a;
@@ -139,24 +167,24 @@ body {
 }
 
 .gb-left {
-    position: relative;
+    position: absolute;
     width: 2rem;
     height: 1.5rem;
-    top: 1rem;
+    top: 3.2rem;
     left: -2rem;
     background-color: #3f515a;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
 }
 
-/* .gb-right {
-    position: relative;
+.gb-right {
+    position: absolute;
     width: 2rem;
     height: 1.5rem;
-    top: 1rem;
-    left: -2rem;
+    top: 3.2rem;
+    right: 9rem;
     background-color: #3f515a;
-    border-radius: .3rem;
-} */
+    border-radius: 0.3rem;
+}
 
 
 /* BUTTONS */
@@ -188,6 +216,7 @@ body {
 }
 
 .gb-btn-content {
+    position: relative;
     margin-top: 3rem;
     margin: 4rem 2rem;
     font-size: .7rem;
@@ -217,4 +246,80 @@ body {
     border-bottom: 4px dotted #3f515a;
     transform: rotate(150deg);
     height: .4rem;
+}
+
+#arcade {
+    color: green;
+    word-wrap: break-word;
+    background-color: white;
+}
+
+
+#snake {
+    color: rgb(138, 6, 6);
+    word-wrap: break-word;
+    background-color: white;
+}
+
+#pacman {
+    color: rgb(138, 6, 6);
+    word-wrap: break-word;
+    background-color: white;
+}
+
+#game {
+    color: rgb(138, 6, 6);
+    word-wrap: break-word;
+    background-color: white;
+}
+
+/* controller box */
+.controller {
+    border-radius: 50%;
+    border: 10px solid green;
+    margin: 120px;
+    width: 100%
+}
+
+/* background img*/
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://68.media.tumblr.com/31c2caf17cb6f18ad912bfc44d9ecde6/tumblr_o71mvufacw1uaundno1_1280.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100;
+    background-size: cover;
+}
+
+#text {
+    position: absolute;
+    color: #7c91be;
+    font-size: 8vw;
+    font-weight: 200;
+}
+
+#playbutton {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-70%, -70%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 50px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 1.4em;
+    color: rgb(89, 95, 127)
 }
