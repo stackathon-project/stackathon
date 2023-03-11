@@ -8,6 +8,7 @@ import SignIn from "./components/Auth/SignIn";
 import SignUp from "./components/Auth/SignUp";
 import TestPage from "./components/TestPage";
 import TestGame from "./components/TestGame";
+import Snake from "./components/RankingTable/Snake";
 import Pacman from "./components/Game/Pacman";
 
 export default function Routing() {
@@ -23,7 +24,9 @@ export default function Routing() {
         {" "}
       </Route>
       <Route path="/testing/game" element={<TestGame />}>
-
+        {" "}
+      </Route>
+      <Route path="/games/ranking" element={<Snake />}>
         {" "}
       </Route>
       <Route path="/pacman" element={<Pacman />}></Route>
