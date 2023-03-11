@@ -12,18 +12,10 @@ export default function Screen(props) {
         2: "pacman",
         3: "game"
     };
-
     let selected = props.selected;
-    console.log("this was selected :", selected);
-
     useEffect(() => {
         setLoadGame(gameList[selected]);
     }, [selected])
-    // const handleSelect = () => {
-    //     console.log("im a game and ive been selected!!!!")
-    // }
-
-    console.log("this is loaded", loadGame)
 
     if (!loadGame) {
         return (
