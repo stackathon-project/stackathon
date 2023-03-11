@@ -1,12 +1,12 @@
 import React from "react";
+import TestGame from "../TestGame";
 
 export default function Game(props) {
-
 
     return (
         <>
             <div id="gamescreen">
-                this is where the third game would go
+                <TestGame />
             </div>
         </>
     )

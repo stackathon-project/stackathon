@@ -336,6 +336,9 @@ section img {
     word-wrap: break-word;
     overflow: hidden;
     width: 160px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #gamescreen {
@@ -360,4 +363,41 @@ section img {
     word-wrap: break-word;
     overflow: hidden;
     width: 160px;
+}
+
+/*the NOT PACMAN GAME CALLED PACMAN LOL*/
+/* #blankblank {
+    background-color: red;
+}
+
+.arrowdown {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/608/608258.png");
+} */
+
+.scoreBoard {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.arrowup {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/626/626075.png");
+}
+
+.arrowdown {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/608/608258.png");
+}
+
+.arrowleft {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/608/608283.png");
+}
+
+.arrowright {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/626/626043.png");
+}
+
+.holder {
+    margin-top: 15px;
+    width: 75px;
+    height: 75px;
+    background-size: 75px;
 }
