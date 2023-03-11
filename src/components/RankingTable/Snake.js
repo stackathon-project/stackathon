@@ -16,15 +16,21 @@ export default function BasicTable() {
     dispatch(GetAllScore());
   }, []);
 
-  function createData(name, calories, fat, date) {
-    return { name, calories, fat, date };
+  function createData(game, name, calories, fat, date) {
+    return { game, name, calories, fat, date };
   }
 
   function generateTable(arr) {
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
       newArr.push(
-        createData(i + 1, arr[i].user, arr[i].score, arr[i].createdAt)
+        createData(
+          i + 1,
+          arr[i].game,
+          arr[i].user,
+          arr[i].score,
+          arr[i].createdAt
+        )
       );
       console.log(1);
       console.log(newArr);
@@ -41,6 +47,7 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell>Ranking</TableCell>
+            <TableCell align="right">Score</TableCell>
             <TableCell align="right">Username</TableCell>
             <TableCell align="right">Score</TableCell>
             <TableCell align="right">Date</TableCell>
@@ -52,9 +59,11 @@ export default function BasicTable() {
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
+              <TableCell align="right">{row.game}</TableCell>
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
+
               <TableCell align="right">{row.calories}</TableCell>
               <TableCell align="right">{row.fat}</TableCell>
               <TableCell align="right">{row.date}</TableCell>

@@ -26,7 +26,7 @@ export const MathGameSlice = createSlice({
       .addCase(UploadScore.fulfilled, (state, action) => {})
       .addCase(GetAllScore.fulfilled, (state, action) => {
         state.scores = action.payload;
-        state.mathScore = action.payload.filter((item) => item.game === "Math");
+        state.mathScore = action.payload;
         state.mathScore = state.mathScore.sort((a, b) => b.score - a.score);
       }),
 });

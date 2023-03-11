@@ -49,7 +49,7 @@ export default function Home() {
               {!authUser ? (
                 <Link to="/signin">Sign In</Link>
               ) : (
-                <Link to="/signin">Sign Out</Link>
+                <Link to="/signout">Sign Out</Link>
               )}
             </div>
           </div>
