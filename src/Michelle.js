@@ -4,7 +4,6 @@ import { useState } from "react";
 import "../public/Michelle.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import Screen from "./components/Screen/SelectionScreen";
 import Snake from "./components/Game/Snake";
 import SelectionScreen from "./components/Screen/SelectionScreen"
 
