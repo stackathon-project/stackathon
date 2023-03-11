@@ -1,6 +1,9 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Auth from "./Auth";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
@@ -30,25 +33,39 @@ export default function SignIn() {
 
   return (
     <div>
-      <form onSubmit={signIn}>
-        <h1>Log In </h1>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button type="submit">Login</button>
-      </form>
-      <>{signUpMsg}</>
-
-      <Auth />
+      <h1>Login</h1>
+      <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+        onSubmit={signIn}
+      >
+        <div>
+          <TextField
+            required
+            id="standard-required"
+            label="Email"
+            defaultValue={email}
+            onChange={(e) => setEmail(e.target.value)}
+            variant="standard"
+          />
+          <TextField
+            id="standard-password-input"
+            label="Password"
+            type="password"
+            defaultValue={password}
+            onChange={(e) => setPassword(e.target.value)}
+            variant="standard"
+          />
+        </div>
+        <Button type="submit" variant="text">
+          Login
+        </Button>
+        <>{signUpMsg}</>
+      </Box>
     </div>
   );
 }
