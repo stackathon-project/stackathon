@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 export default function Auth() {
   const [authUser, setAuthUser] = useState(null);
@@ -34,8 +35,8 @@ export default function Auth() {
       {authUser ? (
         <>
           {" "}
-          <p>Signed in</p>
-          <button onClick={userSignOut}>SignOut</button>
+          <p>Currently: Signed in</p>
+          <Button onClick={userSignOut}>Sign Out</Button>
         </>
       ) : (
         <p>Signed Out</p>

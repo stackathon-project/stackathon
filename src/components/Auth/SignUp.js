@@ -1,7 +1,9 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import { auth } from "../../firebase";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -29,23 +31,39 @@ export default function SignUp() {
 
   return (
     <div>
-      <form onSubmit={signUp}>
-        <h1>Create an Account </h1>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button type="submit">Signup</button>
-      </form>
-      <>{signUpMsg}</>
+      <h1>Registration:</h1>
+      <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+        onSubmit={signUp}
+      >
+        <div>
+          <TextField
+            required
+            id="standard-required"
+            label="Email"
+            defaultValue={email}
+            onChange={(e) => setEmail(e.target.value)}
+            variant="standard"
+          />
+          <TextField
+            id="standard-password-input"
+            label="Password"
+            type="password"
+            defaultValue={password}
+            onChange={(e) => setPassword(e.target.value)}
+            variant="standard"
+          />
+        </div>
+        <Button type="submit" variant="text">
+          Signup
+        </Button>
+        <>{signUpMsg}</>
+      </Box>
     </div>
   );
 }
