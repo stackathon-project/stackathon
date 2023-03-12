@@ -395,9 +395,20 @@ section img {
     background-image: url("https://cdn-icons-png.flaticon.com/512/626/626043.png");
 }
 
+.gameover {
+    background-image: url("https://media.istockphoto.com/id/993792306/vector/breaking-up-pixel-game-over-text.jpg?s=612x612&w=0&k=20&c=5CgB8v6Afg3t2Xw4oz5yswZOHREQSHKluq-z5O0ssbw=");
+    background-repeat: no-repeat;
+}
+
+.startButton {
+    display: inline-block;
+}
+
 .holder {
     margin-top: 15px;
+    margin-left: 18px;
     width: 75px;
     height: 75px;
     background-size: 75px;
+    text-align: center;
 }
