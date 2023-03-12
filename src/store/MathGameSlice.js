@@ -23,7 +23,9 @@ export const MathGameSlice = createSlice({
   reducers: {},
   extraReducers: (build) =>
     build
-      .addCase(UploadScore.fulfilled, (state, action) => {})
+      .addCase(UploadScore.fulfilled, (state, action) => {
+
+      })
       .addCase(GetAllScore.fulfilled, (state, action) => {
         state.scores = action.payload;
         state.mathScore = action.payload;
