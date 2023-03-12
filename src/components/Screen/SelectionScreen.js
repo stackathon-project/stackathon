@@ -5,10 +5,10 @@ export default function Screen() {
     return (
         <>
             <div id="gameboyscreenon">
-                <div id="arcade"> Arcade Games: </div>
+                <div id="arcade" style={{ fontSize: '22px' }}><strong>Arcade Games:</strong></div>
                 <div id="babyscreen">
                     <ListGroup className="listoption">
-                        <ListGroup.Item id="snake">
+                        <ListGroup.Item id="snake" style={{ backgroundColor: 'gray' }}>
                             Snakes
                         </ListGroup.Item>
                         <ListGroup.Item id="pacman">
