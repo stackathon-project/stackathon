@@ -36,7 +36,7 @@ export default function Michelle() {
     1: "pacman",
     2: "game"
   };
-  const lastGame = Object.keys(list).length;
+  const lastGame = Object.keys(list).length - 1;
 
   const handleStart = () => {
     setIsOn(true);
@@ -44,20 +44,28 @@ export default function Michelle() {
   }
 
   const handleMenuDown = () => {
-    if (hovered !== lastGame) {
-      setHovered(hovered + 1);
-      document.getElementById(list[hovered]).style.backgroundColor = "grey";
+    if (hovered < lastGame) {
+      document.getElementById(list[hovered]).style.backgroundColor = "";
+      let newHovered = hovered + 1;
+      setHovered(newHovered);
+      document.getElementById(list[newHovered]).style.backgroundColor = "grey";
     } else {
-      setHovered(1);
+      document.getElementById(list[hovered]).style.backgroundColor = "";
+      setHovered(0);
+      document.getElementById(list[0]).style.backgroundColor = "grey";
     }
   }
 
   const handleMenuUp = () => {
-    if (selected > 0) {
-      setHovered(hovered - 1);
-      document.getElementById(list[hovered]).style.backgroundColor = "grey";
+    if (hovered > 0) {
+      document.getElementById(list[hovered]).style.backgroundColor = "";
+      let newHovered = hovered - 1;
+      setHovered(newHovered);
+      document.getElementById(list[newHovered]).style.backgroundColor = "grey";
     } else {
+      document.getElementById(list[hovered]).style.backgroundColor = "";
       setHovered(lastGame)
+      document.getElementById(list[lastGame]).style.backgroundColor = "grey";
     }
   }
 
