@@ -7,11 +7,9 @@ import "../Landing/Landing.css";
 
 export default function Home() {
   return (
-    <div id="home-container">
-      <div id="home-icon-container">
-        <Gameboy />
-        <Ranking />
-      </div>
-    </div>
+    <>
+      {" "}
+      <Ranking />
+    </>
   );
 }
