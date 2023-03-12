@@ -24,18 +24,12 @@ export default function Home() {
     };
   }, []);
 
-  const userSignOut = () => {
-    signOut(auth)
-      .then(() => console.log("signedout"))
-      .catch((error) => console.log(error));
-  };
-
   return (
     <div id="home-container">
       <nav id="home-nav-bar">
-        <div id="nav_intro">Kimetsu no Yaiba</div>
-        <div id="nav_intro">👺鬼き殺さつ隊た👺</div>
-
+        <div id="nav_intro">
+          {authUser ? <p>Welcome {authUser.email}</p> : null}
+        </div>
         <div className="navbar">
           <div className="dropdown">
             <button className="dropbtn">
@@ -43,14 +37,17 @@ export default function Home() {
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content">
-              <Link to="/">⛩️Home⛩️</Link>
-              <Link to="/michelle">Michelle</Link>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/signup">⛩️Sign Up⛩️</Link>
               {!authUser ? (
-                <Link to="/signin">Sign In</Link>
+                <Link to="/signin">⛩️Sign In⛩️</Link>
               ) : (
-                <Link to="/signout">Sign Out</Link>
+                <Link to="/signout">⛩️Sign Out⛩️</Link>
               )}
+              <Link to="https://animejs.com/">⛩️Anime.js⛩️</Link>
+              <Link to="https://firebase.google.com/docs?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPJB-M0NGR9hZ8jICZf-LwVHXvx_tFCFM_ggK_RZgkiVTX82btat2v4aAnlcEALw_wcB&gclsrc=aw.ds">
+                ⛩️Firebase⛩️
+              </Link>
+              <Link to="https://mui.com/">⛩️Mui⛩️</Link>
             </div>
           </div>
         </div>

@@ -27,12 +27,12 @@
   align-items: center;
   padding: 50px;
   border-radius: 25px;
-  background-color: #42585f;
+  background-color: #467d8e;
   opacity: 0.9;
   color: #e54a4a;
   display: flex;
   height: 50px;
-  width: 100%;
+  width: 75vw;
   padding: 10px;
   justify-content: space-between;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",

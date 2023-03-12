@@ -26,11 +26,14 @@ export default function Technology() {
     <div id="GameBoyIcon">
       <div className="icon-block">
         <div className="icon technology-icon" id="technology-icon-pic">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/2881/2881031.png"
-            width="150px"
-            height="150px"
-          ></img>
+          <Link to="/gameroutes">
+            {" "}
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2881/2881031.png"
+              width="150px"
+              height="150px"
+            ></img>
+          </Link>
         </div>
       </div>
     </div>

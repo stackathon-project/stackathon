@@ -58,6 +58,7 @@ export default function Gameboy() {
               height="150px"
             ></img>
           </Link>
+          <h1>Ranking</h1>
         </div>
       </div>
     </div>
