@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Snake from "./components/Game/Snake";
 import Pacman from "./components/Game/Pacman";
-import Game from "./components/Game/Game"
+// import Game from "./components/Game/Game"
 import TestGame from "./components/TestGame"
 import SelectionScreen from "./components/Screen/SelectionScreen"
 
-export default function Michelle() {
+export default function Michelle(props) {
   const [on, setIsOn] = useState(false);
   const [hovered, setHovered] = useState(null);
   const [selected, setSelected] = useState(null);
@@ -21,10 +21,10 @@ export default function Michelle() {
   let size = 0.75;
 
   useEffect(() => {
-    animation.current = anime({
-      targets: '.gameboy',
-      scale: size
-    });
+    // animation.current = anime({
+    //   targets: '.gameboy',
+    //   scale: size
+    // });
   }, [hovered]);
 
   const homeClick = () => {
@@ -144,7 +144,7 @@ export default function Michelle() {
   } else if (loadGame === 'pacman') {
     return <Pacman />
   } else if (loadGame === "game") {
-    return <Game />
+    return <TestGame />
   }
 }
 

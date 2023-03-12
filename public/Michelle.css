@@ -250,9 +250,10 @@ body {
 }
 
 #arcade {
-    color: green;
+    color: black;
     word-wrap: break-word;
     background-color: white;
+    font-family: monospace;
 }
 
 
@@ -260,18 +261,24 @@ body {
     color: rgb(138, 6, 6);
     word-wrap: break-word;
     background-color: white;
+    font-family: monospace;
+
 }
 
 #pacman {
     color: rgb(138, 6, 6);
     word-wrap: break-word;
     background-color: white;
+    font-family: monospace;
+
 }
 
 #game {
     color: rgb(138, 6, 6);
     word-wrap: break-word;
     background-color: white;
+    font-family: monospace;
+
 }
 
 /* controller box */
@@ -350,7 +357,8 @@ section img {
     flex-direction: column;
     word-wrap: break-word;
     overflow: hidden;
-    width: 160px;
+    width: 150px;
+
 }
 
 #snakescreen {

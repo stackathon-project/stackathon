@@ -31,7 +31,7 @@ export default function Routing() {
       <Route path="/games/ranking" element={<Snake />}>
         {" "}
       </Route>
-      <Route path="/pacman" element={<Pacman />}></Route>
+      <Route path="/arrows" element={<Pacman />}></Route>
       <Route path="/signout" element={<Auth />}></Route>
       <Route path="/aboutus" element={<AboutUs />}></Route>
     </Routes>
