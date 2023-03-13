@@ -15,7 +15,7 @@ export default function Screen() {
                             Arrows
                         </ListGroup.Item>
                         <ListGroup.Item id="game" style={{ fontSize: '12px' }}>
-                            Game
+                            Math
                         </ListGroup.Item>
                     </ListGroup>
                 </div>

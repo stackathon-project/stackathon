@@ -12,6 +12,7 @@ import Snake from "./components/RankingTable/Snake";
 import Pacman from "./components/Game/Pacman";
 import Auth from "./components/Auth/Auth";
 import AboutUs from "./components/Landing/AboutUs";
+import MainLoading from "./components/Loading/MainLoading";
 
 export default function Routing() {
   return (
@@ -34,6 +35,8 @@ export default function Routing() {
       <Route path="/arrows" element={<Pacman />}></Route>
       <Route path="/signout" element={<Auth />}></Route>
       <Route path="/aboutus" element={<AboutUs />}></Route>
+      <Route path="/loading" element={<MainLoading />}></Route>
+
     </Routes>
   );
 }
