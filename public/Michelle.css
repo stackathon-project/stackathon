@@ -11,7 +11,7 @@ body {
 }
 
 .gameboy-body {
-    background: rgb(192, 203, 255);
+    background: #a15d54;
     border-radius: 1rem 1rem 0 0;
     display: flex;
     height: 26rem;
@@ -36,16 +36,16 @@ body {
 
 .gameboy-center-brand {
     text-align: center;
-    border: 1px solid #9ebbee;
+    border: 1px solid #b56c62;
     border-radius: 5rem;
     width: 60%;
     margin: 1rem auto 0 auto;
     font-family: 'PT Sans';
-    color: #7c91be;
+    color: #b56c62;
 }
 
 .gameboy-curve {
-    background: rgb(192, 203, 255);
+    background: #a15d54;
     height: 4rem;
     position: absolute;
     top: 26rem;
@@ -81,7 +81,7 @@ body {
 }
 
 .gameboy-b-cont {
-    background-color: #3f515a;
+    background-color: #453630;
     border-radius: .5rem;
     width: 132px;
     height: 11rem;
@@ -124,7 +124,7 @@ body {
 }
 
 .gameboy-screen-curve {
-    background: #3f515a;
+    background: #453630;
     height: 4rem;
     position: absolute;
     top: 11.5rem;
@@ -136,7 +136,7 @@ body {
 
 .gameboy-screen-curve::before {
     content: 'GAME BOY COLOR';
-    color: white;
+    color: rgb(216, 215, 213);
     position: absolute;
     top: 1.5rem;
     left: 3.6rem;
@@ -153,7 +153,7 @@ body {
     height: 2rem;
     top: 2rem;
     right: 10.3rem;
-    background-color: #3f515a;
+    background-color: #453630;
     border-radius: .3rem;
 }
 
@@ -163,7 +163,7 @@ body {
     height: 2rem;
     top: 4rem;
     right: 10.3rem;
-    background-color: #3f515a;
+    background-color: #453630;
     border-radius: .3rem;
 }
 
@@ -173,7 +173,7 @@ body {
     height: 1.5rem;
     top: 3.2rem;
     left: -2rem;
-    background-color: #3f515a;
+    background-color: #453630;
     border-radius: 0.3rem;
 }
 
@@ -183,7 +183,7 @@ body {
     height: 1.5rem;
     top: 3.2rem;
     right: 9rem;
-    background-color: #3f515a;
+    background-color: #453630;
     border-radius: 0.3rem;
 }
 
@@ -195,7 +195,7 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    background-color: #3f515a;
+    background-color: #453630;
     top: 2rem;
     right: -2rem;
 }
@@ -205,7 +205,7 @@ body {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    background-color: #3f515a;
+    background-color: #453630;
     top: 4rem;
     right: 0rem;
 }
@@ -213,7 +213,7 @@ body {
 .gb-letter {
     margin: .5rem;
     text-align: center;
-    color: #9E9E9E;
+    color: #b56c62;
 }
 
 .gb-btn-content {
@@ -226,13 +226,13 @@ body {
 .gb-btn-center {
     display: flex;
     justify-content: space-around;
-    color: #7c91be;
+    color: #b56c62;
 }
 
 .gb-btn-on {
     width: 3rem;
     height: 1rem;
-    background-color: #3f515a;
+    background-color: #453630;
     border-radius: 2rem;
 }
 
@@ -244,7 +244,7 @@ body {
 
 .gb-dotted {
     width: 3rem;
-    border-bottom: 4px dotted #3f515a;
+    border-bottom: 4px dotted #211a17;
     transform: rotate(150deg);
     height: .4rem;
 }
@@ -371,6 +371,33 @@ section img {
     word-wrap: break-word;
     overflow: hidden;
     width: 160px;
+}
+
+#loading {
+    background-color: white;
+    height: 8rem;
+    margin: 0rem 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 160px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.imgholder {
+    background-color: white;
+    margin-top: 40px;
+    margin-left: -8px;
+    max-width: 75px;
+    width: 50px;
+    height: 50px;
+    background-size: 75px;
+    text-align: center;
 }
 
 /*the NOT PACMAN GAME CALLED PACMAN LOL*/

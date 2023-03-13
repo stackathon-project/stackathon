@@ -6,9 +6,11 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Snake from "./components/Game/Snake";
 import Pacman from "./components/Game/Pacman";
-// import Game from "./components/Game/Game"
+import MainLoading from "./components/Loading/MainLoading";
+import MathLoading from "./components/Loading/MathLoading";
 import TestGame from "./components/TestGame"
-import SelectionScreen from "./components/Screen/SelectionScreen"
+import SelectionScreen from "./components/Screen/SelectionScreen";
+import ArrowLoading from "./components/Loading/ArrowLoading";
 
 export default function Michelle(props) {
   const [on, setIsOn] = useState(false);
@@ -96,7 +98,7 @@ export default function Michelle(props) {
                 <div className="gameboy-b-contBUTTON" onClick={homeClick}> </div>
                 {!on ?
                   <div id="gameboyscreenoff"></div>
-                  : <SelectionScreen />
+                  : <MainLoading />
                 }
                 <div className="gameboy-screen-curve"></div>
               </div>
@@ -142,9 +144,9 @@ export default function Michelle(props) {
   } else if (loadGame === 'snake') {
     return (<Snake />)
   } else if (loadGame === 'pacman') {
-    return <Pacman />
+    return <ArrowLoading />
   } else if (loadGame === "game") {
-    return <TestGame />
+    return <MathLoading />
   }
 }
 

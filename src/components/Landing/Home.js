@@ -33,21 +33,21 @@ export default function Home() {
         <div className="navbar">
           <div className="dropdown">
             <button className="dropbtn">
-              ☁️☁️☁️☁️☁️☁️
+              🔥🔥🔥
               <i className="fa fa-caret-down"></i>
             </button>
             <div className="dropdown-content">
-              <Link to="/signup">⛩️Sign Up⛩️</Link>
+              <Link to="/signup">Sign Up</Link>
               {!authUser ? (
-                <Link to="/signin">⛩️Sign In⛩️</Link>
+                <Link to="/signin">Sign In</Link>
               ) : (
-                <Link to="/signout">⛩️Sign Out⛩️</Link>
+                <Link to="/signout">Sign Out</Link>
               )}
-              <Link to="https://animejs.com/">⛩️Anime.js⛩️</Link>
+              <Link to="https://animejs.com/">Anime.js</Link>
               <Link to="https://firebase.google.com/docs?gclid=Cj0KCQiA6rCgBhDVARIsAK1kGPJB-M0NGR9hZ8jICZf-LwVHXvx_tFCFM_ggK_RZgkiVTX82btat2v4aAnlcEALw_wcB&gclsrc=aw.ds">
-                ⛩️Firebase⛩️
+                Firebase
               </Link>
-              <Link to="https://mui.com/">⛩️Mui⛩️</Link>
+              <Link to="https://mui.com/">Mui</Link>
             </div>
           </div>
         </div>
