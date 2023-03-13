@@ -11,6 +11,7 @@ import MathLoading from "./components/Loading/MathLoading";
 import TestGame from "./components/TestGame"
 import SelectionScreen from "./components/Screen/SelectionScreen";
 import ArrowLoading from "./components/Loading/ArrowLoading";
+import SnakeLoading from "./components/Loading/SnakeLoading"
 
 export default function Michelle(props) {
   const [on, setIsOn] = useState(false);
@@ -142,7 +143,7 @@ export default function Michelle(props) {
       </div>
     )
   } else if (loadGame === 'snake') {
-    return (<Snake />)
+    return (<SnakeLoading />)
   } else if (loadGame === 'pacman') {
     return <ArrowLoading />
   } else if (loadGame === "game") {

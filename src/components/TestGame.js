@@ -28,7 +28,7 @@ export default function TestGame() {
   const [question, setQuestion] = useState("");
   const [Panswer, setPAnswer] = useState(0);
   const [answer, setAnswer] = useState(0);
-  const [grade, setGrade] = useState("starting");
+  const [grade, setGrade] = useState("");
   const [gameOver, setGameOver] = useState(false);
   const [bButton, setBButton] = useState(false);
 
@@ -129,7 +129,6 @@ export default function TestGame() {
                           >
                             Submit
                           </button>
-                          <button onClick={createScore}>Test</button>
                           <>{grade}</>
                         </div>
                         <div className="redline"></div>
