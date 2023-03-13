@@ -1,6 +1,6 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import Auth from "./Auth";
+import Navbar from "../Navbar";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -32,40 +32,46 @@ export default function SignIn() {
   const signOut = () => {};
 
   return (
-    <div>
-      <h1>Login</h1>
-      <Box
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
-        }}
-        noValidate
-        autoComplete="off"
-        onSubmit={signIn}
-      >
+    <div id="home-container">
+      <Navbar />
+
+      <div id="home-icon-container4">
         <div>
-          <TextField
-            required
-            id="standard-required"
-            label="Email"
-            defaultValue={email}
-            onChange={(e) => setEmail(e.target.value)}
-            variant="standard"
-          />
-          <TextField
-            id="standard-password-input"
-            label="Password"
-            type="password"
-            defaultValue={password}
-            onChange={(e) => setPassword(e.target.value)}
-            variant="standard"
-          />
+          <h1>Login</h1>
+          <Box
+            component="form"
+            sx={{
+              "& .MuiTextField-root": { m: 1, width: "25ch" },
+            }}
+            noValidate
+            autoComplete="off"
+            onSubmit={signIn}
+          >
+            <div>
+              <TextField
+                required
+                id="standard-required"
+                label="Email"
+                defaultValue={email}
+                onChange={(e) => setEmail(e.target.value)}
+                variant="standard"
+              />
+              <TextField
+                id="standard-password-input"
+                label="Password"
+                type="password"
+                defaultValue={password}
+                onChange={(e) => setPassword(e.target.value)}
+                variant="standard"
+              />
+            </div>
+            <Button type="submit" variant="text">
+              Login
+            </Button>
+            <>{signUpMsg}</>
+          </Box>
         </div>
-        <Button type="submit" variant="text">
-          Login
-        </Button>
-        <>{signUpMsg}</>
-      </Box>
+      </div>
     </div>
   );
 }

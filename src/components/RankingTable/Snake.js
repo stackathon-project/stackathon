@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { selectMathScores, GetAllScore } from "../../store/MathGameSlice";
+import Navbar from "../Navbar";
 
 export default function BasicTable() {
   let mathScores = useSelector(selectMathScores);
@@ -42,35 +43,40 @@ export default function BasicTable() {
   console.log("rows", rows);
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Ranking</TableCell>
-            <TableCell align="right">Game</TableCell>
-            <TableCell align="right">Username</TableCell>
-            <TableCell align="right">Score</TableCell>
-            <TableCell align="right">Date</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell align="right">{row.game}</TableCell>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
+    <div id="home-container2">
+      <Navbar />
+      <div id="home-icon-container2">
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Ranking</TableCell>
+                <TableCell align="right">Game</TableCell>
+                <TableCell align="right">Username</TableCell>
+                <TableCell align="right">Score</TableCell>
+                <TableCell align="right">Date</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell align="right">{row.game}</TableCell>
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
 
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.date}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+                  <TableCell align="right">{row.calories}</TableCell>
+                  <TableCell align="right">{row.fat}</TableCell>
+                  <TableCell align="right">{row.date}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+    </div>
   );
 }

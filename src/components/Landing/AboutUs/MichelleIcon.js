@@ -47,7 +47,7 @@ export default function MichelleIcon() {
   });
 
   return (
-    <div id="GameBoyIcon">
+    <div id="GameBoyIcon2">
       <div className="icon-block">
         <div className="icon chick-icon" id="gameboy-icon-pic">
           <h1>Software Developer</h1>
@@ -59,9 +59,9 @@ export default function MichelleIcon() {
               height="150px"
             ></img>
           </Link>
-          <h1>Michelle</h1>
         </div>
       </div>
+      <h1>Michelle</h1>
     </div>
   );
 }

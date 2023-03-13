@@ -46,10 +46,10 @@ export default function YaoIcon() {
   });
 
   return (
-    <div id="GameBoyIcon">
+    <div id="GameBoyIcon2">
       <div className="icon-block">
         <div className="icon chick-icon" id="gameboy-icon-pic">
-          <h1>Software Developer</h1>
+          <h1>Software Developer </h1>
           <Link to="/">
             {" "}
             <img
@@ -58,9 +58,10 @@ export default function YaoIcon() {
               height="150px"
             ></img>
           </Link>
-          <h1>Yao</h1>
         </div>
       </div>
+
+      <h1>Yao</h1>
     </div>
   );
 }

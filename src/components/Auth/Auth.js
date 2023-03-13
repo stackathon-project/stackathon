@@ -3,6 +3,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+import Navbar from "../Navbar";
 
 export default function Auth() {
   const [authUser, setAuthUser] = useState(null);
@@ -31,16 +32,21 @@ export default function Auth() {
   };
 
   return (
-    <div>
-      {authUser ? (
-        <>
-          {" "}
-          <p>Currently: Signed in</p>
-          <Button onClick={userSignOut}>Sign Out</Button>
-        </>
-      ) : (
-        <p>Signed Out</p>
-      )}{" "}
+    <div id="home-container">
+      <Navbar />
+      <div id="home-icon-container4">
+        <div>
+          {authUser ? (
+            <>
+              {" "}
+              <p>Currently: Signed in</p>
+              <Button onClick={userSignOut}>Sign Out</Button>
+            </>
+          ) : (
+            <p>Signed Out</p>
+          )}{" "}
+        </div>
+      </div>
     </div>
   );
 }
