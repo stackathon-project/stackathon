@@ -13,33 +13,34 @@ import Pacman from "./components/Game/Pacman";
 import Auth from "./components/Auth/Auth";
 import AboutUs from "./components/Landing/AboutUs";
 import MainLoading from "./components/Loading/MainLoading";
-import Snakes from "./components/Game/Snake"
+import Snakes from "./components/Game/Snake";
 
 export default function Routing() {
   return (
-    <Routes>
-      <Route path="/michelle" element={<Michelle />}></Route>
-      <Route path="/play" element={<Play />}></Route>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/gameroutes" element={<GameRoutes />}></Route>
-      <Route path="/signin" element={<SignIn />}></Route>
-      <Route path="/signup" element={<SignUp />}></Route>
-      <Route path="/testing" element={<TestPage />}>
-        {" "}
-      </Route>
-      <Route path="/testing/game" element={<TestGame />}>
-        {" "}
-      </Route>
-      <Route path="/games/ranking" element={<Snake />}>
-        {" "}
-      </Route>
-      <Route path="/arrows" element={<Pacman />}></Route>
-      <Route path="/signout" element={<Auth />}></Route>
-      <Route path="/aboutus" element={<AboutUs />}></Route>
-      <Route path="/loading" element={<MainLoading />}></Route>
-      <Route path="/loading" element={<MainLoading />}></Route>
-      <Route path="/snake" element={<Snakes />}></Route>
-
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/michelle" element={<Michelle />}></Route>
+        <Route path="/play" element={<Play />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/gameroutes" element={<GameRoutes />}></Route>
+        <Route path="/signin" element={<SignIn />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/testing" element={<TestPage />}>
+          {" "}
+        </Route>
+        <Route path="/testing/game" element={<TestGame />}>
+          {" "}
+        </Route>
+        <Route path="/games/ranking" element={<Snake />}>
+          {" "}
+        </Route>
+        <Route path="/arrows" element={<Pacman />}></Route>
+        <Route path="/signout" element={<Auth />}></Route>
+        <Route path="/aboutus" element={<AboutUs />}></Route>
+        <Route path="/loading" element={<MainLoading />}></Route>
+        <Route path="/loading" element={<MainLoading />}></Route>
+        <Route path="/snake" element={<Snakes />}></Route>
+      </Routes>
+    </>
   );
 }
