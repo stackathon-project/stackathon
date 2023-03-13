@@ -20,7 +20,7 @@ export default function MathLoading() {
 
     setTimeout(() => {
         setIsLoaded(true)
-    }, 3500)
+    }, 2000)
 
     if (!loaded) {
         return (

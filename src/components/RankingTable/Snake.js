@@ -47,7 +47,7 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell>Ranking</TableCell>
-            <TableCell align="right">Score</TableCell>
+            <TableCell align="right">Game</TableCell>
             <TableCell align="right">Username</TableCell>
             <TableCell align="right">Score</TableCell>
             <TableCell align="right">Date</TableCell>

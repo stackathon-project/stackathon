@@ -19,7 +19,7 @@ export default function ArrowLoading() {
 
     setTimeout(() => {
         setIsLoaded(true)
-    }, 3500)
+    }, 2000)
 
     if (!loaded) {
         return (

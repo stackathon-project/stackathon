@@ -113,11 +113,9 @@ export default function Pacman() {
 
     const [bButton, setBButton] = useState(false);
 
-
     const handleBClick = () => {
         setBButton(true);
     }
-
 
     if (bButton === false) {
         return (

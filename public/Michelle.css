@@ -447,3 +447,19 @@ section img {
     background-size: 75px;
     text-align: center;
 }
+
+.snakeone {
+    background-image: url("https://i.natgeofe.com/n/f80a6834-c7d0-4e93-b113-ae708652a527/snakes_01_4x3.jpg");
+}
+
+.snaketwo {
+    background-image: url("https://d2jx2rerrg6sh3.cloudfront.net/images/Article_Images/ImageForArticle_21923_16401874858717448.jpg");
+}
+
+.snakethree {
+    background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/04/snake-1.jpg?quality=75&strip=all");
+}
+
+.snakefour {
+    background-image: url("https://static.scientificamerican.com/sciam/cache/file/43EF2BE9-C016-4772-98C2E8D0A7F2E03A_source.jpg");
+}
