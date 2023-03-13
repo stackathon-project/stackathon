@@ -46,8 +46,8 @@ export default function Gameboy() {
   });
 
   return (
-    <div id="GameBoyIcon">
-      <div className="icon-block">
+    <div id="GameBoyIcon2">
+      <div className="icon-block2">
         <div className="icon chick-icon" id="gameboy-icon-pic">
           <Link to="/games/ranking">
             {" "}
@@ -58,8 +58,8 @@ export default function Gameboy() {
               height="150px"
             ></img>
           </Link>
-          <h1>Ranking</h1>
         </div>
+        <h1>Ranking</h1>
       </div>
     </div>
   );
